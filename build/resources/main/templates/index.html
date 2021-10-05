@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>TimeNotes</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <style>
+        body {background: #E5E5E5; }
+    </style>
+  </head>
+          
+  <body>
+  <div class=e35_586>
+            <div class=e35_587>
+                <div class=e35_589>
+                    <div class=e35_590>
+                        <div class=e35_591>
+                            <span  class="ei35_591_3_82">시간표</span>
+                        </div>
+                        <div class=e35_592>
+                            <span  class="ei35_592_3_82">강의노트</span>
+                        </div>
+                        <div class=e35_593>
+                            <a class="ei35_593_3_84" href="hello.html">내 정보</a>
+                        </div>
+                        <div  class="e35_594"></div>
+                        <div class=e35_595>
+                            <a class="ei35_595_3_82" href="/loginForm">로그인</a>
+                        </div>
+                        <div class=e35_596>
+                            <a class="ei35_596_3_82" href="/joinForm">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+                <div class=e35_597>
+                    <div class=e35_598>
+                        <div class=e35_599>
+                            <div class=ei35_599_3_76>
+                                <div  class="ei35_599_3_77">
+                                </div>
+                                <div  class="ei35_599_3_78">
+                                </div>
+                                <div  class="ei35_599_3_79">
+                                </div>
+                                <div  class="ei35_599_3_80">
+                                </div>
+                            </div>
+                        </div>
+                        <span  class="e35_600">TimeNote</span>
+                    </div>
+                </div>
+            </div>
+            <div class=e35_612>
+                <div class=e35_613>
+                    <div  class="e35_614">
+                    </div>
+                </div>
+                <div  class="e35_615">
+                </div>
+                <span  class="e35_616">© 2021 All Rights Reserved</span>
+                <div class=e35_617>
+                    <div class=e35_618>
+                        <div  class="e35_619">
+                        </div>
+                    </div>
+                    <span  class="e35_620">Social Media</span>
+                    <div class=e35_621>
+                        <div class=e35_622>
+                            <div  class="ei35_622_11_41">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=e35_623>
+                    <span  class="e35_624">sampleemail@gmail.com</span>
+                    <span  class="e35_626">Contacts</span>
+                    <div class=e35_627>
+                        <div  class="e35_628">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=e40_239>
+                <div class=e36_167>
+                    <div class=e36_137>
+                        <div  class="e36_138">
+                        </div>
+                        <div class=e36_139>
+                            <span  class="e36_140">Algorithm</span>
+                            <span  class="e36_141">Think about this thing.</span>
+                        </div>
+                    </div>
+                    <div class=e36_132>
+                        <div  class="e36_133">
+                        </div>
+                        <div class=e36_134>
+                            <span  class="e36_135">Linux</span>
+                            <span  class="e36_136">Details of what to do.</span>
+                        </div>
+                    </div>
+                    <div class=e36_157>
+                        <div  class="ei36_157_36_143">
+                        </div>
+                        <div class=ei36_157_36_144>
+                            <span  class="ei36_157_36_145">Android</span>
+                            <span  class="ei36_157_36_146">Details of what not to do.</span>
+                        </div>
+                    </div>
+                    <div class=e36_142>
+                        <div  class="e36_143">
+                        </div><div class=e36_144>
+                        <span  class="e36_145">C Programming</span>
+                        <span  class="e36_146">Details of what not to do.</span>
+                    </div>
+                    </div>
+                    <div class=e36_162>
+                        <div  class="ei36_162_36_143"></div>
+                        <div class=ei36_162_36_144>
+                            <span  class="ei36_162_36_145">OS</span>
+                            <span  class="ei36_162_36_146">Details of what not to do.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class=e37_204>
+                    <div class=e35_657>
+                        <div class=e35_658>
+                            <div class=e35_659>
+                                <span  class="ei35_659_35_631">Date and Time</span>
+                            </div>
+                            <div class=e35_660>
+                                <span  class="ei35_660_35_633">Title</span>
+                            </div>
+                            <div class=e35_661>
+                                <div class=e35_662>
+                                    <span  class="ei35_662_35_635">Tag</span>
+                                </div>
+                                <div class=e35_663>
+                                    <span  class="ei35_663_35_635">Tag</span>
+                                </div>
+                                <div class=e35_664>
+                                    <span  class="ei35_664_35_635">Tag</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="editor" class=e35_665>
+                            <span  class="ei35_665_35_639">Enter your notes</span>
+                        </div>
+                    </div>
+                    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+                    <script>
+                        const Editor = toastui.Editor;
+
+                        const editor = new Editor({
+                            el: document.querySelector('#editor'),
+                            height: '500px',
+                            initialEditType: 'markdown',
+                            previewStyle: 'vertical'
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+  </body>
+</html>
