@@ -27,8 +27,8 @@ public class UserEntity {
     @Column(name = "password",length = 1000)
     String password;
 
-//    @Column(name = "school", length = 500)
-//    String school;
+    @Column(name = "school", length = 500)
+    String school;
 
     public String getUsername() {
         return username;
@@ -42,14 +42,14 @@ public class UserEntity {
         return password;
     }
 
-//    public String getSchool() {
-//        return school;
-//    }
+    public String getSchool() {
+        return school;
+    }
 
-    public UserEntity(String email, String username, String password){
+    public UserEntity(String email, String username, String password, String school){
         this.email = email;
         this.username = username;
         this.password = password;
-//        this.school = school;
+        this.school = school;
     }
 }

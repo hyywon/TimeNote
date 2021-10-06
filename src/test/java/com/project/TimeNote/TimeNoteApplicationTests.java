@@ -43,11 +43,11 @@ class TimeNoteApplicationTests {
 	@Test
 	@Transactional
 	public void 회원가입(){
-		UserEntity user = new UserEntity("test", "test", "test");
+		UserEntity user = new UserEntity("test", "test", "test", "school");
 
 		userRepository.save(user);
 
-		System.out.println(user.getUsername());
+		System.out.println(user.getSchool());
 	}
 
 	@Test
