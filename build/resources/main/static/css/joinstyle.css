@@ -254,7 +254,7 @@
 }
 .e40_237 { 
 	width:554px;
-	height:222px;
+	height:300px;
 	position:absolute;
 	left:83px;
 	top:435px;
@@ -318,13 +318,20 @@
 	width:300px;
 	border:none;
 }
-.e40_233 { 
+.e40_2331 {
 	width:554px;
 	height:74px;
 	position:absolute;
 	left:0px;
 	top:74px;
 }
+.e40_233 {
+	 width:554px;
+	 height:74px;
+	 position:absolute;
+	 left:0px;
+	 top:148px;
+ }
 .e40_234 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:554px;
@@ -332,10 +339,17 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-}
-.e40_234 {
 	border:1px solid rgba(193.49308043718338, 186.86419934034348, 186.86419934034348, 1);
 }
+.e40_2341 {
+	 background-color:rgba(255, 255, 255, 1);
+	 width:554px;
+	 height:74px;
+	 position:absolute;
+	 left:0px;
+	 top:0px;
+	 border:1px solid rgba(193.49308043718338, 186.86419934034348, 186.86419934034348, 1);
+ }
 .e40_235 { 
 	color:rgba(55.00000052154064, 81.00000277161598, 254.00000005960464, 1);
 	width:39px;
@@ -350,7 +364,33 @@
 	border:none;
 	width:300px;
 }
+.e40_2351 {
+	 color:rgba(55.00000052154064, 81.00000277161598, 254.00000005960464, 1);
+	 width:39px;
+	 height:21px;
+	 position:absolute;
+	 left:27px;
+	 top:47px;
+	 font-family:Nanum Myeongjo;
+	 text-align:left;
+	 font-size:18px;
+	 letter-spacing:0;
+	 border:none;
+	 width:300px;
+ }
 .e40_236 { 
+	color:rgba(0, 0, 0, 0.6100000143051147);
+	width:48px;
+	height:21px;
+	position:absolute;
+	left:27px;
+	top:16px;
+	font-family:Nanum Myeongjo;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+}
+.e40_2361 {
 	color:rgba(0, 0, 0, 0.6100000143051147);
 	width:48px;
 	height:21px;
@@ -367,7 +407,7 @@
 	height:74px;
 	position:absolute;
 	left:0px;
-	top:148px;
+	top:219px;
 }
 .e40_202 { 
 	background-color:rgba(255, 255, 255, 1);
@@ -406,12 +446,12 @@
 	font-size:18px;
 	letter-spacing:0;
 }
-.e40_212 { 
+.e40_212 {
 	width:129px;
 	height:54px;
 	position:absolute;
 	left:83px;
-	top:745px;
+	top:800px;
 }
 .e40_213 { 
 	background-color:rgba(255, 255, 255, 1);
@@ -420,22 +460,12 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-}
-.e40_213 {
+	font-family:Nanum Myeongjo;
+	text-decoration-color:rgba(55.00000052154064, 81.00000277161598, 254.00000005960464, 1);
+	font-size:18px;
 	border:1px solid rgba(55.00000052154064, 81.00000277161598, 254.00000005960464, 1);
 }
-.e40_214 { 
-	color:rgba(11.841897368431091, 48.55610489845276, 241.30558043718338, 1);
-	width:62px;
-	height:21px;
-	position:absolute;
-	left:34px;
-	top:15px;
-	font-family:Nanum Myeongjo;
-	text-align:left;
-	font-size:18px;
-	letter-spacing:0;
-}
+
 .e40_215 { 
 	color:rgba(0, 0, 0, 0.6000000238418579);
 	width:309px;

@@ -424,19 +424,13 @@
 	border:none;
 	letter-spacing:0;
 }
-.e40_182 { 
-	width:277px;
-	height:54px;
-	position:absolute;
-	left:83px;
-	top:685px;
-}
+
 .e40_180 { 
 	width:129px;
 	height:54px;
 	position:absolute;
-	left:0px;
-	top:0px;
+	left:83px;
+	top:685px;
 }
 .e38_138 { 
 	box-shadow:0px 4px 3px rgba(0, 0, 0, 0.25);
@@ -446,18 +440,12 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-}
-.e40_176 { 
-	color:rgba(255, 255, 255, 1);
-	width:45px;
-	height:21px;
-	position:absolute;
-	left:42px;
-	top:17px;
-	text-align:left;
+	text-decoration-color: rgba(255, 255, 255, 1);
+	font-family:Nanum Myeongjo;
 	font-size:18px;
-	letter-spacing:0;
+
 }
+
 .e40_181 { 
 	width:129px;
 	height:54px;
