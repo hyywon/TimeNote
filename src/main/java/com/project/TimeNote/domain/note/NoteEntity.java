@@ -2,7 +2,9 @@ package com.project.TimeNote.domain.note;
 
 import com.project.TimeNote.domain.subject.SubjectEntity;
 import com.project.TimeNote.domain.user.UserEntity;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -11,6 +13,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "NOTE")
+@AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class NoteEntity {
@@ -37,5 +40,9 @@ public class NoteEntity {
     @JoinColumn(name = "subject_id")
     private SubjectEntity subject;
 
+    public NoteEntity(String title, String content){
+        this.title = title;
+        this.content = content;
+    }
 
 }

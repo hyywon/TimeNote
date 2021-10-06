@@ -10,4 +10,5 @@ public class TimeNoteApplication {
 		SpringApplication.run(TimeNoteApplication.class, args);
 	}
 
+
 }

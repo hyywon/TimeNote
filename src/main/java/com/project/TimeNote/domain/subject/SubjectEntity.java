@@ -1,6 +1,8 @@
 package com.project.TimeNote.domain.subject;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -10,6 +12,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "SUBJECT")
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class SubjectEntity {
 
@@ -23,5 +26,10 @@ public class SubjectEntity {
 
     @Column(name = "no")
     Integer no;
+
+    public SubjectEntity(String name, Integer no){
+        this.name = name;
+        this.no = no;
+    }
 
 }
