@@ -12,6 +12,7 @@ let index = {
             email: $("#email").val(),
             username: $("#username").val(),
             password: $("#password").val(),
+            school: $("#school").val()
         }
         console.log(data);
         // ajax 통신을 통해서 입력받은 데이터 input 요청

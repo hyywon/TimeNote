@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://tyhmeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<!--session 접근-->
+<sec:authorize access="isAuthenticated()">
+    <sec:authentication property="principal" var="principal">
+    </sec:authentication>
+</sec:authorize>
+<header class=e88_335 th:fragment="commonHeader">
+    <div class=e88_337>
+        <div class=e88_338>
+            <div class=e88_339><a href="#" class="ei88_339_3_82">시간표</a></div>
+            <div class=e88_340><a href="../note.html" class="ei88_340_3_82">강의노트</a></div>
+            <div class=e88_341><a href="#" class="ei88_341_3_84">내 정보</a></div>
+            <div class="e88_342"></div>
+            <div class=e88_343><a href="../login.html" class="ei88_343_3_82">로그인</a></div>
+            <div class=e88_344><a href="../join.html" class="ei88_344_3_82">회원가입</a></div>
+        </div>
+    </div>
+    <div class=e88_345>
+        <div class=e88_346>
+            <div class=e88_347>
+                <div class=ei88_347_3_76>
+                    <div class="ei88_347_3_77"></div>
+                    <div class="ei88_347_3_78"></div>
+                    <div class="ei88_347_3_79"></div>
+                    <div class="ei88_347_3_80"></div>
+                </div>
+            </div>
+            <span class="e88_348">TimeNote</span></div>
+    </div>
+</header>
+</html>
