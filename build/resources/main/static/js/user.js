@@ -25,9 +25,14 @@ let index = {
             contentType: "application/json; charset=utf-8",
             dataType: "json"
         }).done(function(resp){
-            console.log(resp);
-            alert("회원가입 성공");
-            location.href = "/";
+            if(resp.status === 500){
+                console.log(resp);
+                alert("회원가입 실패");
+            }else{
+                console.log(resp);
+                alert("회원가입 성공");
+                location.href = "/";
+            }
         }).fail(function(error){
                 alert(JSON.stringify(error));
                 alert("회원가입 실패");
