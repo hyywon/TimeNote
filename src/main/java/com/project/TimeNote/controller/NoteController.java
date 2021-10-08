@@ -12,4 +12,10 @@ public class NoteController {
         return "note";
     }
 
+    @GetMapping("/time")
+    public String TimeTable(){
+
+        return "timetable";
+    }
+
 }
