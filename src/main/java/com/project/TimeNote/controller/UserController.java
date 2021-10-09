@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class UserController {
 
-    @GetMapping("/joinForm")
+    @GetMapping("/auth/joinForm")
     public String joinForm() {
 
         return "join";
     }
 
-    @GetMapping("/loginForm")
+    @GetMapping("/auth/loginForm")
     public String loginForm() {
 
         return "login";

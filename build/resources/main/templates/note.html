@@ -1,88 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+<head>
+    <title>TimeNote</title>
+</head>
 
-    <title>TimeNotes</title>
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<th:block layout:fragment="css">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <style>
-        body {background: #E5E5E5; }
+        body {
+            background: #E5E5E5;
+            font-family: Nanum Myeongjo;
+        }
     </style>
-  </head>
-          
-  <body>
-  <div class=e35_586>
-            <div class=e35_587>
-                <div class=e35_589>
-                    <div class=e35_590>
-                        <div class=e35_591>
-                            <a href="#"  class="ei35_591_3_82">시간표</a>
-                        </div>
-                        <div class=e35_592>
-                            <span href="/note" class="ei35_592_3_82">강의노트</span>
-                        </div>
-                        <div class=e35_593>
-                            <a class="ei35_593_3_84" href="#">내 정보</a>
-                        </div>
-                        <div  class="e35_594"></div>
-                        <div class=e35_595>
-                            <a class="ei35_595_3_82" href="/loginForm">로그인</a>
-                        </div>
-                        <div class=e35_596>
-                            <a class="ei35_596_3_82" href="/joinForm">회원가입</a>
-                        </div>
-                    </div>
-                </div>
-                <div class=e35_597>
-                    <div class=e35_598>
-                        <div class=e35_599>
-                            <div class=ei35_599_3_76>
-                                <div  class="ei35_599_3_77">
-                                </div>
-                                <div  class="ei35_599_3_78">
-                                </div>
-                                <div  class="ei35_599_3_79">
-                                </div>
-                                <div  class="ei35_599_3_80">
-                                </div>
-                            </div>
-                        </div>
-                        <a class="e35_600" href="/">TimeNote</a>
-                    </div>
-                </div>
-            </div>
-            <div class=e35_612>
-                <div class=e35_613>
-                    <div  class="e35_614">
-                    </div>
-                </div>
-                <div  class="e35_615">
-                </div>
-                <span  class="e35_616">© 2021 All Rights Reserved</span>
-                <div class=e35_617>
-                    <div class=e35_618>
-                        <div  class="e35_619">
-                        </div>
-                    </div>
-                    <span  class="e35_620">Social Media</span>
-                    <div class=e35_621>
-                        <div class=e35_622>
-                            <div  class="ei35_622_11_41">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class=e35_623>
-                    <span  class="e35_624">sampleemail@gmail.com</span>
-                    <span  class="e35_626">Contacts</span>
-                    <div class=e35_627>
-                        <div  class="e35_628">
-                        </div>
-                    </div>
-                </div>
-            </div>
+</th:block>
+
+<th:block layout:fragment="script">
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</th:block>
+
+<header th:replace="fragments/header :: commonHeader">
+</header>
+  <div layout:fragment="content" class=e35_586>
             <div class=e40_239>
                 <div class=e36_167>
                     <div class=e36_137>
@@ -164,5 +108,6 @@
                 </div>
             </div>
         </div>
-  </body>
+<footer th:replace="fragments/footer :: commonFooter"></footer>
+
 </html>

@@ -20,7 +20,7 @@ let index = {
         $.ajax({
             // 회원가입 수행 요청
             type:"POST",
-            url:"/join",
+            url:"/auth/join",
             data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8",
             dataType: "json"
@@ -39,27 +39,6 @@ let index = {
 
         });
     },
-    login: function () {
-        let data = {
-            email: $("#email").val(),
-            password: $("#password").val()
-        }
-
-        $.ajax({
-            type: "POST",
-            url: "/login",
-            data: JSON.stringify(data),
-            dataType: "json",
-            contentType: "application/json; charset=utf-8"
-        }).done(function (resp) {
-            console.log(data);
-            alert("로그인완료");
-            location.href = "/";
-        }).fail(function (error) {
-            alert(JSON.stringify(error));
-            console.log(JSON.stringify(error));
-        });
-    }
 }
 
 index.init();

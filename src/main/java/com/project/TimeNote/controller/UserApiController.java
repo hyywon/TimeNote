@@ -5,7 +5,6 @@ import com.project.TimeNote.domain.user.UserRepository;
 import com.project.TimeNote.dto.ResponseDto;
 import com.project.TimeNote.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.relational.core.sql.In;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +18,7 @@ public class UserApiController {
     @Autowired
     public UserService userService;
 
-    @PostMapping("/join")
+    @PostMapping("/auth/join")
     public ResponseDto<Integer> join(@RequestBody UserEntity user){ //name, password, email, school
         System.out.println(user.getUsername() + user.getPassword() + user.getEmail());
         System.out.println("User Join API");
