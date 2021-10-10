@@ -18,4 +18,10 @@ public class NoteController {
         return "timetable";
     }
 
+    @GetMapping("/addTime")
+    public String AddTime(){
+
+        return "addTime";
+    }
+
 }

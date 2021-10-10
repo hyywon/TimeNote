@@ -9,7 +9,6 @@
 <th:block layout:fragment="css">
     <link rel="stylesheet" href="/css/loginstyles.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
 
     <style>
         body {
@@ -18,7 +17,6 @@
         }
     </style>
 </th:block>
-<th:block layout:fragment="script">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </th:block>
@@ -48,7 +46,10 @@
             <button id="btn-login" class="e38_138">Login</button>
         </div>
     </form>
-    <span class="e39_162">Welcome  back! Please login to your account.</span><span
-        class="e38_132">Study in TimeNote !</span></div>
-<footer th:replace="fragments/footer :: commonFooter"></footer>
+    <span class="e39_162">Welcome  back! Please login to your account.</span>
+    <span class="e38_132">Study in TimeNote !</span>
+    <div th:if="${LoginFailMessage!=null}">
+        <p> ID 또는 Password 를 확인해주세요 </p>
+    </div>
+</div>
 </html>

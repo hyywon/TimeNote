@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
+<head>
+    <title>TimeTable</title>
+</head>
+<th:block layout:fragment="css">
+    <link rel="stylesheet" href="/css/addStyle.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        body {
+            background: #E5E5E5;
+            font-family: "Nanum Myeongjo";
+        }
+    </style>
+</th:block>
+
+<th:block layout:fragment="script">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</th:block>
+
+<div class=e103_329>
+    <header th:replace="fragments/header :: commonHeader"></header>
+    <div class=e103_588>
+        <form>
+            <div class=e103_589>
+                <div class=e103_552>
+                    <div class="e103_554"></div>
+                    <input type="text" name="subject" id="subject" class="e103_556"/>
+                    <label for="subject" class="e103_555">과목</label>
+                </div>
+                <div class=e103_5521>
+                    <div class="e103_5541"></div>
+                    <input type="text" name="no" id="no" class="e103_5561"/>
+                    <label for="no" class="e103_5551">수강번호</label>
+                </div>
+                <div class=e103_590>
+                    <div class="e103_592"></div>
+                    <input type="text" name="professor" id="professor" class="e103_593"/>
+                    <label for="professor" class="e103_594">교수명</label>
+                </div>
+                <div class=e103_567>
+                    <div class="e103_569"></div>
+                    <input type="text" name="days" id="days" class="e103_570"/>
+                    <label for="days" class="e103_571">요일</label>
+                </div>
+                <div class=e103_582>
+                    <div class="e103_584"></div>
+                        <input type="time" name="start" id="start" class="e103_585"/>
+                        <span class="e103_596">-</span>
+                        <input type="time" name="finish" id="finish" class="e103_595"/>
+                        <label for="start" class="e103_586">시간</label>
+                </div>
+            </div>
+        </form>
+        <div class="e103_523">
+            <div class=ei103_523_35_581>
+                <div class="ei103_523_35_582">
+                    <button id="btn-save" class="ei103_523_35_584">추가하기</button>
+                </div>
+            </div>
+        </div>
+        <script src="/js/subject.js"></script>
+        <span class="e103_551">새로운 수업 추가</span></div>
+    <div class=e103_607>
+        <div class=e103_597><span class="ei103_597_35_635">Tag</span></div>
+        <div class=e103_599><span class="ei103_599_35_635">Tag</span></div>
+        <div class=e103_601><span class="ei103_601_35_635">Tag</span></div>
+        <div class=e103_603><span class="ei103_603_35_635">Tag</span></div>
+        <div class=e103_605><span class="ei103_605_35_635">Tag</span></div>
+    </div>
+    <footer th:replace="fragments/footer :: commonFooter"></footer>
+</div>
+</html>

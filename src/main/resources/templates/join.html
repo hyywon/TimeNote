@@ -1,51 +1,31 @@
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
 <head>
-    <meta charset="utf-8">
-
     <title>Join</title>
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<th:block layout:fragment="css">
     <link rel="stylesheet" href="/css/joinstyle.css">
-
+    <link rel="stylesheet" href="/css/header.css">
     <style>
         body {
             background: #E5E5E5;
-            font-family: "Nanum Myeongjo";
+            font-family: Nanum Myeongjo;
         }
     </style>
+</th:block>
+<th:block layout:fragment="script">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</th:block>
 
-</head>
-
-<body>
 <div class=e40_183>
+    <header th:replace="fragments/header :: commonHeader"></header>
     <div class="e40_184"></div>
     <div class=e40_185>
         <div class="ei40_185_39_175"></div>
-    </div>
-    <div class=e40_186>
-        <div class="e40_187"></div>
-        <div class=e40_188>
-            <div class=e40_189>
-                <div class=e40_190><a href="#" class="ei40_190_3_82">시간표</a></div>
-                <div class=e40_191><a href="/note" class="ei40_191_3_82">강의노트</a></div>
-                <div class=e40_192><a href="#" class="ei40_192_3_84">내 정보</a></div>
-                <div class="e40_193"></div>
-                <div class=e40_194><a href="/auth/loginForm" class="ei40_194_3_82">로그인</a></div>
-                <div class=e40_195><a href="/auth/joinForm" class="ei40_195_3_82">회원가입</a></div>
-            </div>
-        </div>
-        <div class=e40_196>
-            <div class=e40_197>
-                <div class=e40_198>
-                    <div class=ei40_198_3_76>
-                        <div class="ei40_198_3_77"></div>
-                        <div class="ei40_198_3_78"></div>
-                        <div class="ei40_198_3_79"></div>
-                        <div class="ei40_198_3_80"></div>
-                    </div>
-                </div>
-                <a href="/" class="e40_199">TimeNote</a></div>
-        </div>
     </div>
     <form>
         <div class=e40_237>
@@ -72,12 +52,10 @@
             </div>
         </div>
     </form>
-
     <div class=e40_212>
         <button id="btn-join" class="e40_213">Sign Up</button>
     </div>
     <script src="/js/user.js"></script>
     <span class="e40_215">Welcome ! Please Join with TimeNote.</span><span class="e40_216">Study with TimeNote !</span>
 </div>
-</body>
 </html>

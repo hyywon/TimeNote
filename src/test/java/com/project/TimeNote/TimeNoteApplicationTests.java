@@ -12,6 +12,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Time;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 @SpringBootTest
 class TimeNoteApplicationTests {
@@ -62,8 +65,8 @@ class TimeNoteApplicationTests {
 
 	@Test
 	@Transactional
-	public void 과목생성(){
-		SubjectEntity subject = new SubjectEntity("test",1234);
+	public void 과목생성() {
+		SubjectEntity subject = new SubjectEntity("sub",1234, "test", Time.valueOf("10:00:00") , Time.valueOf("12:00:00"));
 
 		subjectRepository.save(subject);
 

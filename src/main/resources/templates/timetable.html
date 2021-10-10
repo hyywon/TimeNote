@@ -1,71 +1,30 @@
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
 <head>
-    <meta charset="utf-8">
-
     <title>TimeTable</title>
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-
+</head>
+<th:block layout:fragment="css">
     <link rel="stylesheet" href="/css/timestyles.css">
-
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <style>
-
         body {
             background: #E5E5E5;
             font-family: "Nanum Myeongjo";
         }
     </style>
+</th:block>
 
-</head>
+<th:block layout:fragment="script">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</th:block>
 
-<body>
 <div class=e3_3>
-    <div class=e25_56>
-        <div class=e25_58>
-            <div class=e25_59>
-                <div class=e25_60><span class="ei25_60_3_82">시간표</span></div>
-                <div class=e25_61><span class="ei25_61_3_82">강의노트</span></div>
-                <div class=e25_62><span class="ei25_62_3_84">내 정보</span></div>
-                <div class="e25_63"></div>
-                <div class=e25_64><span class="ei25_64_3_82">로그인</span></div>
-                <div class=e25_65><span class="ei25_65_3_82">회원가입</span></div>
-            </div>
-        </div>
-        <div class=e25_66>
-            <div class=e25_67>
-                <div class=e25_68>
-                    <div class=ei25_68_3_76>
-                        <div class="ei25_68_3_77"></div>
-                        <div class="ei25_68_3_78"></div>
-                        <div class="ei25_68_3_79"></div>
-                        <div class="ei25_68_3_80"></div>
-                    </div>
-                </div>
-                <span class="e25_69">TimeNote</span></div>
-        </div>
-    </div>
-    <div class=e25_81>
-        <div class=e25_82>
-            <div class="e25_83"></div>
-        </div>
-        <div class="e25_84"></div>
-        <span class="e25_85">© 2021 All Rights Reserved</span>
-        <div class=e25_86>
-            <div class=e25_87>
-                <div class="e25_88"></div>
-            </div>
-            <span class="e25_89">Social Media</span>
-            <div class=e25_90>
-                <div class=e25_91>
-                    <div class="ei25_91_11_41"></div>
-                </div>
-            </div>
-        </div>
-        <div class=e25_92><span class="e25_93">sampleemail@gmail.com</span><span class="e25_95">Contacts</span>
-            <div class=e25_96>
-                <div class="e25_97"></div>
-            </div>
-        </div>
-    </div>
+    <header th:replace="fragments/header :: commonHeader"></header>
     <div class=e32_71>
         <div class=e32_72>
             <div class=e32_73>
@@ -155,97 +114,102 @@
                 <div class=e32_158><span class="e32_159">Thursday</span></div>
                 <div class=e32_160><span class="e32_161">Friday</span></div>
             </div>
-            <div class=e32_162>
-                <div class=e32_163>
-                    <div class=e32_164>
-                        <div class="e32_165"></div>
-                        <div class="e32_166"></div>
-                        <div class=e32_167>
-                            <div class=e32_168><span class="ei32_168_29_988">Algorithm</span></div>
-                        </div>
-                        <div class="e32_170"></div>
-                        <div class="e32_171"></div>
-                    </div>
-                </div>
-                <div class=e32_172>
-                    <div class=e32_173>
-                        <div class="e32_174"></div>
-                        <div class="e32_175"></div>
-                        <div class=e32_176>
-                            <div class=e32_177><span class="ei32_177_29_988">Linux</span></div>
-                        </div>
-                        <div class="e32_179"></div>
-                        <div class="e32_180"></div>
-                    </div>
-                </div>
-                <div class=e32_181>
-                    <div class=e32_182>
-                        <div class="e32_183"></div>
-                        <div class="e32_184"></div>
-                        <div class="e32_185"></div>
-                        <div class="e32_186"></div>
-                        <span class="e32_188">C programming</span></div>
-                </div>
-                <div class=e32_189>
-                    <div class=e32_190>
-                        <div class="e32_191"></div>
-                        <div class="e32_192"></div>
-                        <div class="e32_193"></div>
-                        <div class="e32_194"></div>
-                        <span class="e32_196">Android
-</span></div>
-                </div>
-                <div class=e32_197>
-                    <div class=e32_198>
-                        <div class="e32_199"></div>
-                        <div class="e32_200"></div>
-                        <div class=e32_201></div>
-                        <div class="e32_203"></div>
-                        <div class="e32_204"></div>
-                        <span class="e32_205">C programming</span></div>
-                </div>
-                <div class=e32_206>
-                    <div class=e32_207>
-                        <div class="e32_208"></div>
-                        <div class="e32_209"></div>
-                        <div class=e32_210>
-                            <div class=e32_211><span class="ei32_211_29_988">Linux</span></div>
-                        </div>
-                        <div class="e32_213"></div>
-                        <div class="e32_214"></div>
-                    </div>
-                </div>
-                <div class=e32_215>
-                    <div class=e32_216>
-                        <div class="e32_217"></div>
-                        <div class="e32_218"></div>
-                        <div class=e32_219>
-                            <div class=e32_220><span class="ei32_220_29_988">Algorithm</span></div>
-                        </div>
-                        <div class="e32_222"></div>
-                        <div class="e32_223"></div>
-                    </div>
-                </div>
-                <div class=e32_224>
-                    <div class=e32_225>
-                        <div class="e32_226"></div>
-                        <div class="e32_227"></div>
-                        <div class=e32_228>
-                            <div class=e32_229><span class="ei32_229_29_988">OS</span></div>
-                        </div>
-                        <div class="e32_231"></div>
-                        <div class="e32_232"></div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <div class=e35_576>
         <div class=e35_581>
             <div class="e35_582"></div>
-            <div class=e35_583><span class="e35_584">수정하기</span></div>
+            <div class=e35_583><a href="/addTime" class="e35_584">추가하기</a></div>
         </div>
     </div>
+    <footer th:replace="fragments/footer :: commonFooter"></footer>
 </div>
-</body>
 </html>
+
+
+
+
+<!--<div class=e32_162>-->
+<!--    <div class=e32_163>-->
+<!--        <div class=e32_164>-->
+<!--            <div class="e32_165"></div>-->
+<!--            <div class="e32_166"></div>-->
+<!--            <div class=e32_167>-->
+<!--                <div class=e32_168><span class="ei32_168_29_988">Algorithm</span></div>-->
+<!--            </div>-->
+<!--            <div class="e32_170"></div>-->
+<!--            <div class="e32_171"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class=e32_172>-->
+<!--        <div class=e32_173>-->
+<!--            <div class="e32_174"></div>-->
+<!--            <div class="e32_175"></div>-->
+<!--            <div class=e32_176>-->
+<!--                <div class=e32_177><span class="ei32_177_29_988">Linux</span></div>-->
+<!--            </div>-->
+<!--            <div class="e32_179"></div>-->
+<!--            <div class="e32_180"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class=e32_181>-->
+<!--        <div class=e32_182>-->
+<!--            <div class="e32_183"></div>-->
+<!--            <div class="e32_184"></div>-->
+<!--            <div class="e32_185"></div>-->
+<!--            <div class="e32_186"></div>-->
+<!--            <span class="e32_188">C programming</span></div>-->
+<!--    </div>-->
+<!--    <div class=e32_189>-->
+<!--        <div class=e32_190>-->
+<!--            <div class="e32_191"></div>-->
+<!--            <div class="e32_192"></div>-->
+<!--            <div class="e32_193"></div>-->
+<!--            <div class="e32_194"></div>-->
+<!--            <span class="e32_196">Android-->
+<!--</span></div>-->
+<!--    </div>-->
+<!--    <div class=e32_197>-->
+<!--        <div class=e32_198>-->
+<!--            <div class="e32_199"></div>-->
+<!--            <div class="e32_200"></div>-->
+<!--            <div class=e32_201></div>-->
+<!--            <div class="e32_203"></div>-->
+<!--            <div class="e32_204"></div>-->
+<!--            <span class="e32_205">C programming</span></div>-->
+<!--    </div>-->
+<!--    <div class=e32_206>-->
+<!--        <div class=e32_207>-->
+<!--            <div class="e32_208"></div>-->
+<!--            <div class="e32_209"></div>-->
+<!--            <div class=e32_210>-->
+<!--                <div class=e32_211><span class="ei32_211_29_988">Linux</span></div>-->
+<!--            </div>-->
+<!--            <div class="e32_213"></div>-->
+<!--            <div class="e32_214"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class=e32_215>-->
+<!--        <div class=e32_216>-->
+<!--            <div class="e32_217"></div>-->
+<!--            <div class="e32_218"></div>-->
+<!--            <div class=e32_219>-->
+<!--                <div class=e32_220><span class="ei32_220_29_988">Algorithm</span></div>-->
+<!--            </div>-->
+<!--            <div class="e32_222"></div>-->
+<!--            <div class="e32_223"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class=e32_224>-->
+<!--        <div class=e32_225>-->
+<!--            <div class="e32_226"></div>-->
+<!--            <div class="e32_227"></div>-->
+<!--            <div class=e32_228>-->
+<!--                <div class=e32_229><span class="ei32_229_29_988">OS</span></div>-->
+<!--            </div>-->
+<!--            <div class="e32_231"></div>-->
+<!--            <div class="e32_232"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

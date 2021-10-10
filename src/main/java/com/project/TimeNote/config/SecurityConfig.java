@@ -1,6 +1,7 @@
 package com.project.TimeNote.config;
 
 import com.project.TimeNote.config.auth.PrincipalDetailService;
+import com.project.TimeNote.handler.LoginFailureHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,6 +22,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private PrincipalDetailService principalDetailService;
+
+    @Autowired
+    private LoginFailureHandler loginFailureHandler;
 
     @Bean // Ioc 등록
     public BCryptPasswordEncoder encodePWD(){
@@ -51,6 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticated()
             .and()
                 .formLogin()
+                .failureHandler(loginFailureHandler)
                 .loginPage("/auth/loginForm")
                 .loginProcessingUrl("/auth/login")
                 .defaultSuccessUrl("/",true); // 성공 했을 때 돌아갈 url
