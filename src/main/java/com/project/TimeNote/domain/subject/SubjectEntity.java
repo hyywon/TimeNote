@@ -33,14 +33,16 @@ public class SubjectEntity {
     @Column(name = "professor")
     String professor;
 
+    @JsonFormat(pattern="HH:MM")
     @Column(name = "start_class")
-    Time start_class;
+    String start_class;
 
+    @JsonFormat(pattern="HH:MM")
     @Column(name = "finish_class")
-    Time finish_class;
+    String finish_class;
 
 
-    public SubjectEntity(String name, Integer no, String professor, Time start, Time finish){
+    public SubjectEntity(String name, Integer no, String professor, String start, String finish){
         this.name = name;
         this.no = no;
         this.professor = professor;

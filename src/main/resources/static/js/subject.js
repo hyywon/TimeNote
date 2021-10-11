@@ -6,12 +6,11 @@ let index = {
     },
     save: function () {
         let data = {
-            subject: $("#subject").val(),
+            name: $("#subject").val(),
             professor: $("#professor").val(),
             no: $("#no").val(),
-            days: $("#days").val(),
-            start: $("#start").val(),
-            finish: $("#finish").val()
+            start_class: $("#start").val(),
+            finish_class: $("#finish").val()
         }
         console.log(data);
 
