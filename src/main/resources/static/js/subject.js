@@ -9,6 +9,7 @@ let index = {
             name: $("#subject").val(),
             professor: $("#professor").val(),
             no: $("#no").val(),
+            day: $("#days").val(),
             start_class: $("#start").val(),
             finish_class: $("#finish").val()
         }

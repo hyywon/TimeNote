@@ -2,6 +2,7 @@ package com.project.TimeNote;
 
 import com.project.TimeNote.domain.note.NoteEntity;
 import com.project.TimeNote.domain.note.NoteRepository;
+import com.project.TimeNote.domain.subject.Days;
 import com.project.TimeNote.domain.subject.SubjectEntity;
 import com.project.TimeNote.domain.subject.SubjectRepository;
 import com.project.TimeNote.domain.user.UserEntity;
@@ -64,7 +65,7 @@ class TimeNoteApplicationTests {
 	@Test
 	@Transactional
 	public void 과목생성() { //Time.valueOf("10:00:00")
-		SubjectEntity subject = new SubjectEntity("sub",1234, "test", "10:00" , "12:00");
+		SubjectEntity subject = new SubjectEntity("sub",1234, "test", Days.MON, "10:00" , "12:00");
 
 		subjectRepository.save(subject);
 		System.out.println(subject.getName());

@@ -33,6 +33,10 @@ public class SubjectEntity {
     @Column(name = "professor")
     String professor;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "day")
+    private Days day;
+
     @JsonFormat(pattern="HH:MM")
     @Column(name = "start_class")
     String start_class;
@@ -42,9 +46,10 @@ public class SubjectEntity {
     String finish_class;
 
 
-    public SubjectEntity(String name, Integer no, String professor, String start, String finish){
+    public SubjectEntity(String name, Integer no, String professor, Days day, String start, String finish){
         this.name = name;
         this.no = no;
+        this.day = day;
         this.professor = professor;
         this.start_class = start;
         this.finish_class = finish;
