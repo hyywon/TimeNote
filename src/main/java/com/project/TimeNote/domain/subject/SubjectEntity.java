@@ -55,4 +55,15 @@ public class SubjectEntity {
         this.finish_class = finish;
     }
 
+    public String getDay() {
+        return day.toString();
+    }
+
+    public String getStart_class() {
+        return start_class.substring(0,5);
+    }
+
+    public String getFinish_class() {
+        return finish_class.substring(0,5);
+    }
 }

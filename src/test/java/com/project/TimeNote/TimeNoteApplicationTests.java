@@ -65,7 +65,7 @@ class TimeNoteApplicationTests {
 	@Test
 	@Transactional
 	public void 과목생성() { //Time.valueOf("10:00:00")
-		SubjectEntity subject = new SubjectEntity("sub",1234, "test", Days.MON, "10:00" , "12:00");
+		SubjectEntity subject = new SubjectEntity("sub",1234, "test", Days.Mon, "10:00" , "12:00");
 
 		subjectRepository.save(subject);
 		System.out.println(subject.getName());

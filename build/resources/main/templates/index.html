@@ -27,34 +27,39 @@
         <header th:replace="fragments/header :: commonHeader">
         </header>
         <div class=e88_431>
+            <!--   과목 리스트   -->
             <div class=e88_432>
-                <div class=e88_433>
-                    <div class="ei88_433_36_138"></div>
-                    <div class=ei88_433_36_139><span class="ei88_433_36_140">Algorithm</span><span
-                            class="ei88_433_36_141">Think about this thing.</span>
+                <!--   과목 1   -->
+                <div th:each="sub : ${subjects}">
+                    <div class=e88_433>
+                        <div class="ei88_433_36_138"></div>
+                        <div class=ei88_433_36_139><span th:text="${sub.name}" class="ei88_433_36_140"></span>
+                            <span th:text="${sub.getDay()} + ' ' + ${sub.getStart_class()} +'-' + ${sub.getFinish_class()} " class="ei88_433_36_141">Think about this thing.</span>
+                        </div>
                     </div>
                 </div>
-                <div class=e88_434>
-                    <div class="ei88_434_36_133"></div>
-                    <div class=ei88_434_36_134><span class="ei88_434_36_135">Linux</span><span class="ei88_434_36_136">Details of what to do.</span>
-                    </div>
-                </div>
-                <div class=e88_435>
-                    <div class="ei88_435_36_143"></div>
-                    <div class=ei88_435_36_144><span class="ei88_435_36_145">Android</span><span
-                            class="ei88_435_36_146">Details of what not to do.</span>
-                    </div>
-                </div>
-                <div class=e88_436>
-                    <div class="ei88_436_36_143"></div>
-                    <div class=ei88_436_36_144><span class="ei88_436_36_145">C Programming</span><span
-                            class="ei88_436_36_146">Details of what not to do.</span></div>
-                </div>
-                <div class=e88_437>
-                    <div class="ei88_437_36_143"></div>
-                    <div class=ei88_437_36_144><span class="ei88_437_36_145">OS</span><span class="ei88_437_36_146">Details of what not to do.</span>
-                    </div>
-                </div>
+<!--                &lt;!&ndash;   과목 2   &ndash;&gt;-->
+<!--                <div class=e88_434>-->
+<!--                    <div class="ei88_434_36_133"></div>-->
+<!--                    <div class=ei88_434_36_134><span class="ei88_434_36_135">Linux</span><span class="ei88_434_36_136">Details of what to do.</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class=e88_435>-->
+<!--                    <div class="ei88_435_36_143"></div>-->
+<!--                    <div class=ei88_435_36_144><span class="ei88_435_36_145">Android</span><span-->
+<!--                            class="ei88_435_36_146">Details of what not to do.</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class=e88_436>-->
+<!--                    <div class="ei88_436_36_143"></div>-->
+<!--                    <div class=ei88_436_36_144><span class="ei88_436_36_145">C Programming</span><span-->
+<!--                            class="ei88_436_36_146">Details of what not to do.</span></div>-->
+<!--                </div>-->
+<!--                <div class=e88_437>-->
+<!--                    <div class="ei88_437_36_143"></div>-->
+<!--                    <div class=ei88_437_36_144><span class="ei88_437_36_145">OS</span><span class="ei88_437_36_146">Details of what not to do.</span>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
             <div class=e89_400>
                 <div class=e89_401>

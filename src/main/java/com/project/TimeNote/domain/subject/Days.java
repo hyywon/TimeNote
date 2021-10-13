@@ -5,12 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 public enum Days {
-        MON,
-        TUE,
-        WED,
-        THU,
-        FRI,
-        SAT,
-        SUN;
+        월,
+        Tue,
+        Wed,
+        Thu,
+        Fri,
+        Sat,
+        Sun;
 
 }
