@@ -21,6 +21,7 @@
 
 <th:block layout:fragment="script">
     <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 </th:block>
 
@@ -68,6 +69,7 @@
                         </div>
                     </div>
                 </div>
+                <button onclick='seehtml(editor)'>html보기</button>
                 <div class=e37_204>
                     <div class=e35_657>
                         <div class=e35_658>
@@ -94,9 +96,9 @@
                         </div>
                     </div>
                     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+                    <script src="/js/note.js"></script>
                     <script>
                         const Editor = toastui.Editor;
-
                         const editor = new Editor({
                             el: document.querySelector('#editor'),
                             height: '500px',
