@@ -20,96 +20,105 @@
 </th:block>
 
 <th:block layout:fragment="script">
-    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 </th:block>
 
 <header th:replace="fragments/header :: commonHeader">
 </header>
-  <div layout:fragment="content" class=e35_586>
-            <div class=e40_239>
-                <div class=e36_167>
-                    <div class=e36_137>
-                        <div  class="e36_138">
-                        </div>
-                        <div class=e36_139>
-                            <span  class="e36_140">Algorithm</span>
-                            <span  class="e36_141">Think about this thing.</span>
-                        </div>
-                    </div>
-                    <div class=e36_132>
-                        <div  class="e36_133">
-                        </div>
-                        <div class=e36_134>
-                            <span  class="e36_135">Linux</span>
-                            <span  class="e36_136">Details of what to do.</span>
-                        </div>
-                    </div>
-                    <div class=e36_157>
-                        <div  class="ei36_157_36_143">
-                        </div>
-                        <div class=ei36_157_36_144>
-                            <span  class="ei36_157_36_145">Android</span>
-                            <span  class="ei36_157_36_146">Details of what not to do.</span>
-                        </div>
-                    </div>
-                    <div class=e36_142>
-                        <div  class="e36_143">
-                        </div><div class=e36_144>
-                        <span  class="e36_145">C Programming</span>
-                        <span  class="e36_146">Details of what not to do.</span>
-                    </div>
-                    </div>
-                    <div class=e36_162>
-                        <div  class="ei36_162_36_143"></div>
-                        <div class=ei36_162_36_144>
-                            <span  class="ei36_162_36_145">OS</span>
-                            <span  class="ei36_162_36_146">Details of what not to do.</span>
-                        </div>
-                    </div>
+<div layout:fragment="content" class=e35_586>
+    <div class=e40_239>
+        <div class=e36_167>
+            <div class=e36_137>
+                <div class="e36_138">
                 </div>
-                <button onclick='seehtml(editor)'>html보기</button>
-                <div class=e37_204>
-                    <div class=e35_657>
-                        <div class=e35_658>
-                            <div class=e35_659>
-                                <span  class="ei35_659_35_631">Date and Time</span>
-                            </div>
-                            <div class=e35_660>
-                                <span  class="ei35_660_35_633">Title</span>
-                            </div>
-                            <div class=e35_661>
-                                <div class=e35_662>
-                                    <span  class="ei35_662_35_635">Tag</span>
-                                </div>
-                                <div class=e35_663>
-                                    <span  class="ei35_663_35_635">Tag</span>
-                                </div>
-                                <div class=e35_664>
-                                    <span  class="ei35_664_35_635">Tag</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="editor" class=e35_665>
-                            <span  class="ei35_665_35_639">Enter your notes</span>
-                        </div>
-                    </div>
-                    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-                    <script src="/js/note.js"></script>
-                    <script>
-                        const Editor = toastui.Editor;
-                        const editor = new Editor({
-                            el: document.querySelector('#editor'),
-                            height: '500px',
-                            initialEditType: 'markdown',
-                            previewStyle: 'vertical'
-                        });
-                    </script>
-
+                <div class=e36_139>
+                    <span class="e36_140">Algorithm</span>
+                    <span class="e36_141">Think about this thing.</span>
+                </div>
+            </div>
+            <div class=e36_132>
+                <div class="e36_133">
+                </div>
+                <div class=e36_134>
+                    <span class="e36_135">Linux</span>
+                    <span class="e36_136">Details of what to do.</span>
+                </div>
+            </div>
+            <div class=e36_157>
+                <div class="ei36_157_36_143">
+                </div>
+                <div class=ei36_157_36_144>
+                    <span class="ei36_157_36_145">Android</span>
+                    <span class="ei36_157_36_146">Details of what not to do.</span>
+                </div>
+            </div>
+            <div class=e36_142>
+                <div class="e36_143">
+                </div>
+                <div class=e36_144>
+                    <span class="e36_145">C Programming</span>
+                    <span class="e36_146">Details of what not to do.</span>
+                </div>
+            </div>
+            <div class=e36_162>
+                <div class="ei36_162_36_143"></div>
+                <div class=ei36_162_36_144>
+                    <span class="ei36_162_36_145">OS</span>
+                    <span class="ei36_162_36_146">Details of what not to do.</span>
                 </div>
             </div>
         </div>
+        <button onclick='seehtml(editor)'>저장하기</button>
+        <div class=e37_204>
+            <div class=e35_657>
+                <div class=e35_658>
+                    <div class=e35_659>
+                        <span class="ei35_659_35_631">Date and Time</span>
+                    </div>
+                    <form>
+                        <input type="text" name="title" id="title" placeholder="title.." class="e35_660">
+                    </form>
+                    <div class=e35_661>
+                        <div class=e35_662>
+                            <select id="selectSub">
+                                <div th:each="sub:${subjects}">
+                                    <option id="subject" th:value="${sub.id}" th:text="${sub.name}"
+                                            class="ei35_662_35_635"></option>
+
+                                </div>
+                            </select>
+                        </div>
+                        <div class=e35_663>
+                            <span class="ei35_663_35_635">Tag</span>
+                        </div>
+                        <div class=e35_664>
+                            <span class="ei35_664_35_635">Tag</span>
+                        </div>
+                    </div>
+                    </form>
+
+                </div>
+                <div id="editor" class=e35_665>
+                    <span class="ei35_665_35_639">Enter your notes</span>
+                </div>
+            </div>
+            <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+            <script src="/js/note.js"></script>
+            <script>
+                const Editor = toastui.Editor;
+                const editor = new Editor({
+                    el: document.querySelector('#editor'),
+                    height: '500px',
+                    initialEditType: 'markdown',
+                    previewStyle: 'vertical'
+                });
+            </script>
+
+        </div>
+    </div>
+</div>
 <footer th:replace="fragments/footer :: commonFooter"></footer>
 
 </html>

@@ -52,15 +52,15 @@ class TimeNoteApplicationTests {
 		System.out.println(user.getSchool());
 	}
 
-	@Test
-	@Transactional
-	public void 노트작성(){
-		NoteEntity note = new NoteEntity("test","test");
-
-		noteRepository.save(note);
-
-		System.out.println(note.getTitle());
-	}
+//	@Test
+//	@Transactional
+//	public void 노트작성(){
+//		NoteEntity note = new NoteEntity("test","test",);
+//
+//		noteRepository.save(note);
+//
+//		System.out.println(note.getTitle());
+//	}
 
 	@Test
 	@Transactional

@@ -40,9 +40,10 @@ public class NoteEntity {
     @JoinColumn(name = "subject_id")
     private SubjectEntity subject;
 
-    public NoteEntity(String title, String content){
+    public NoteEntity(String title, String content, SubjectEntity subject){
         this.title = title;
         this.content = content;
+        this.subject = subject;
     }
 
 }

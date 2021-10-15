@@ -2,7 +2,10 @@ package com.project.TimeNote.service;
 
 import com.project.TimeNote.domain.note.NoteEntity;
 import com.project.TimeNote.domain.note.NoteRepository;
+import com.project.TimeNote.dto.ResponseDto;
+import com.project.TimeNote.dto.note.NoteSaveDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,4 +23,10 @@ public class NoteService {
         return noteRepository.findAll();
     }
 
+    @Transactional
+    public ResponseDto<Integer> 작성하기(NoteSaveDto noteSaveDto){
+        noteRepository.noteSave(noteSaveDto.getTitle(), noteSaveDto.getContent(), noteSaveDto.getSubject_id());
+
+        return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
+    }
 }

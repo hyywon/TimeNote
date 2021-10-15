@@ -1,11 +1,12 @@
-
-seehtml = function(editor) {
+seehtml = function (editor) {
     alert(editor.getHTML());
-    var title = "title";
+    const title = document.getElementById('title').value;
+    const sub = document.getElementById('selectSub').value;
 
     let data = {
         title: title,
-        content: editor.getHTML()
+        content: editor.getHTML(),
+        subject_id: Number(sub),
     }
 
     console.log(data);
@@ -16,9 +17,10 @@ seehtml = function(editor) {
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         dataType: "json"
-    }).done(function (resp){
+    }).done(function (resp) {
         alert("노트 추가완료");
-    }).fail(function (error){
+        location.href = "/";
+    }).fail(function (error) {
         alert(JSON.stringify(error));
     });
 
