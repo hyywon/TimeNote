@@ -10,7 +10,8 @@
 }
 .e88_431 { 
 	width:1260px;
-	height:660px;
+	height:auto;
+	min-height: auto;
 	position:absolute;
 	left:90px;
 	top:122px;
@@ -262,7 +263,8 @@
 }
 .e89_400 { 
 	width:990px;
-	height:538px;
+	height:auto;
+	min-height: 100%;
 	position:absolute;
 	left:270px;
 	top:61px;
@@ -575,6 +577,14 @@
 	position:absolute;
 	left:0px;
 	top:372px;
+}
+
+.e89_5001 {
+	width:990px;
+	height:166px;
+	position:absolute;
+	left:0px;
+	top:562px;
 }
 .e89_501 { 
 	box-shadow:0px 10px 20px rgba(41.00000135600567, 41.00000135600567, 42.000001296401024, 0.07000000029802322);

@@ -8,14 +8,17 @@
 </head>
 <th:block layout:fragment="css">
     <link rel="stylesheet" href="/css/timestyles.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
     <style>
-        body {
+        html, body {
+            height: 100%;
+            width: 100%;
             background: #E5E5E5;
-            font-family: "Nanum Myeongjo";
+            font-family: Nanum Myeongjo;
+            margin: 0;
+            padding: 0;
         }
-        *{
+
+        * {
             padding: 0px;
         }
     </style>
@@ -23,170 +26,151 @@
 
 <th:block layout:fragment="script">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 </th:block>
 
-<div class=e3_3>
-    <header th:replace="fragments/header :: commonHeader"></header>
-    <div class=e32_71>
-        <div class=e32_72>
-            <div class=e32_151>
-                <table class=e32_151>
-                    <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>Tuesday</td>
-                        <td>Wendsday</td>
-                        <td>Thursday</td>
-                        <td>Friday</td>
-                    </tr>
-                    </tbody>
-                </table>
+<div layout:fragment="content">
+    <div class=e3_3>
+        <div class=e32_71>
+            <div class=e32_72>
+                <div class=e32_151>
+                    <table class=e32_151>
+                        <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Tuesday</td>
+                            <td>Wendsday</td>
+                            <td>Thursday</td>
+                            <td>Friday</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class=e32_89>
+                    <table class="e32_89">
+                        <tbody>
+                        <tr>
+                            <th>
+                                <div class="times">
+                                    <div class="e32_90 time">9 AM</div>
+                                    <div class="e32_96 time">10 AM</div>
+                                    <div class="e32_101 time">11 AM</div>
+                                    <div class="e32_106 time">12 PM</div>
+                                    <div class="e32_111 time">1 PM</div>
+                                    <div class="e32_116 time">2 PM</div>
+                                    <div class="e32_121 time">3 PM</div>
+                                    <div class="e32_126 time">4 PM</div>
+                                    <div class="e32_131 time">5 PM</div>
+                                    <div class="e32_136 time">6 PM</div>
+                                    <div class="e32_141 time">7 PM</div>
+                                    <div class="e32_146 time">8 PM</div>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="col"></div>
+                                <div class="grid">
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col"></div>
+                                <div class="grid">
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="col"></div>
+                                <div class="grid">
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="col"></div>
+                                <div class="grid">
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="col"></div>
+                                <div class="grid">
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+                                    <div class="grids"></div>
+
+                                </div>
+
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class=e32_89>
-                <table class="e32_89">
-                    <tbody>
-                    <tr>
-                        <th>
-                            <div class="times">
-                                <div class="e32_90 time">9 AM</div>
-                                <div class="e32_96 time">10 AM</div>
-                                <div class="e32_101 time">11 AM</div>
-                                <div class="e32_106 time">12 PM</div>
-                                <div class="e32_111 time">1 PM</div>
-                                <div class="e32_116 time">2 PM</div>
-                                <div class="e32_121 time">3 PM</div>
-                                <div class="e32_126 time">4 PM</div>
-                                <div class="e32_131 time">5 PM</div>
-                                <div class="e32_136 time">6 PM</div>
-                                <div class="e32_141 time">7 PM</div>
-                                <div class="e32_146 time">8 PM</div>
-                            </div>
-                        </th>
-                        <td>
-                            <div class="col"></div>
-                            <div class="grid">
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-
-                            </div>
-                        </td>
-                        <td>
-                            <div class="col"></div>
-                            <div class="grid">
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                            </div>
-
-                        </td>
-                        <td>
-                            <div class="col"></div>
-                            <div class="grid">
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                            </div>
-
-                        </td>
-                        <td>
-                            <div class="col"></div>
-                            <div class="grid">
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-
-                            </div>
-
-                        </td>
-                        <td>
-                            <div class="col"></div>
-                            <div class="grid">
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-                                <div class="grids"> </div>
-
-                            </div>
-
-                        </td>
-                    </tr>
-
-                    </tbody>
-                </table>
+        </div>
+        <div class=e35_576>
+            <div class=e35_581>
+                <div class="e35_582"></div>
+                <div class=e35_583><a href="/addTime" class="e35_584">추가하기</a></div>
             </div>
-            <!--            <div class=e32_73>-->
-            <!--                <div class="e32_82"></div>-->
-            <!--                <div class="e32_83"></div>-->
-            <!--                <div class="e32_74"></div>-->
-            <!--                <div class="e32_75"></div>-->
-            <!--                <div class="e32_76"></div>-->
-            <!--                <div class="e32_77"></div>-->
-            <!--                <div class="e32_78"></div>-->
-            <!--                <div class="e32_79"></div>-->
-            <!--                <div class="e32_80"></div>-->
-            <!--                <div class="e32_81"></div>-->
-            <!--                <div class="e32_84"></div>-->
-            <!--                <div class="e32_85"></div>-->
-            <!--                <div class="e32_86"></div>-->
-            <!--                <div class="e32_87"></div>-->
-            <!--                <div class="e32_88"></div>-->
-            <!--            </div>-->
-
         </div>
     </div>
-    <div class=e35_576>
-        <div class=e35_581>
-            <div class="e35_582"></div>
-            <div class=e35_583><a href="/addTime" class="e35_584">추가하기</a></div>
-        </div>
-    </div>
-    <footer th:replace="fragments/footer :: commonFooter"></footer>
 </div>
 </html>
 

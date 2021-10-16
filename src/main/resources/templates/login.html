@@ -8,48 +8,52 @@
 </head>
 <th:block layout:fragment="css">
     <link rel="stylesheet" href="/css/loginstyles.css">
-    <link rel="stylesheet" href="/css/header.css">
 
     <style>
-        body {
+        html, body {
+            height: 100%;
+            width: 100%;
             background: #E5E5E5;
             font-family: Nanum Myeongjo;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </th:block>
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<th:block layout:fragment="script">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 </th:block>
 
-<div class=e38_127>
-    <header th:replace="fragments/header :: commonHeader"></header>
-    <div class="e38_140"></div>
-    <div class=e39_174>
-        <div class="e39_175"></div>
-    </div>
-    <div class="e39_164"></div>
-    <span class="e39_166">Remember Me</span><span class="e39_167">Forgot Password?</span>
-    <form action="/auth/login" method="post">
-        <div class=e40_238>
-            <div class=e40_179>
-                <div class="e39_163"></div>
-                <label for="password" class="e39_165">Password</label>
-                <input type="text" name="password" id="password" class="e39_173">
-            </div>
-            <div class=e39_168>
-                <div class="e39_169"></div>
-                <label for="username" class="e39_171">UserName [ID] </label>
-                <input type="text" name="username" id="username" class="e39_172">
-            </div>
+<div layout:fragment="content">
+    <div class=e38_127>
+        <div class="e38_140"></div>
+        <div class=e39_174>
+            <div class="e39_175"></div>
         </div>
-        <div class=e40_180>
-            <button id="btn-login" class="e38_138">Login</button>
+        <div class="e39_164"></div>
+        <span class="e39_166">Remember Me</span><span class="e39_167">Forgot Password?</span>
+        <form action="/auth/login" method="post">
+            <div class=e40_238>
+                <div class=e40_179>
+                    <div class="e39_163"></div>
+                    <label for="password" class="e39_165">Password</label>
+                    <input type="text" name="password" id="password" class="e39_173">
+                </div>
+                <div class=e39_168>
+                    <div class="e39_169"></div>
+                    <label for="username" class="e39_171">UserName [ID] </label>
+                    <input type="text" name="username" id="username" class="e39_172">
+                </div>
+            </div>
+            <div class=e40_180>
+                <button id="btn-login" class="e38_138">Login</button>
+            </div>
+        </form>
+        <span class="e39_162">Welcome  back! Please login to your account.</span>
+        <span class="e38_132">Study in TimeNote !</span>
+        <div th:if="${LoginFailMessage!=null}">
+            <p> ID 또는 Password 를 확인해주세요 </p>
         </div>
-    </form>
-    <span class="e39_162">Welcome  back! Please login to your account.</span>
-    <span class="e38_132">Study in TimeNote !</span>
-    <div th:if="${LoginFailMessage!=null}">
-        <p> ID 또는 Password 를 확인해주세요 </p>
     </div>
 </div>
 </html>

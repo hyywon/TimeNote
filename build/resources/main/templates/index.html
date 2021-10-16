@@ -2,18 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorator="layout/default_layout">
+      layout:decorate="~{layout/default_layout}">
 <head>
     <title>TimeNote</title>
 </head>
 <th:block layout:fragment="css">
     <link href="/css/main.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
     <style>
-        body {
+        html, body {
+            height: 100%;
+            width: 100%;
             background: #E5E5E5;
             font-family: Nanum Myeongjo;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </th:block>
@@ -24,8 +26,6 @@
 
 <div layout:fragment="content">
     <div class="e88_333">
-        <header th:replace="fragments/header :: commonHeader">
-        </header>
         <div class=e88_431>
             <!--   과목 리스트   -->
             <div class=e88_432>
@@ -34,32 +34,11 @@
                     <div class=e88_433>
                         <div class="ei88_433_36_138"></div>
                         <div class=ei88_433_36_139><span th:text="${sub.name}" class="ei88_433_36_140"></span>
-                            <span th:text="${sub.getDay()} + ' ' + ${sub.getStart_class()} +'-' + ${sub.getFinish_class()} " class="ei88_433_36_141">Think about this thing.</span>
+                            <span th:text="${sub.getDay()} + ' ' + ${sub.getStart_class()} +'-' + ${sub.getFinish_class()} "
+                                  class="ei88_433_36_141">Think about this thing.</span>
                         </div>
                     </div>
                 </div>
-<!--                &lt;!&ndash;   과목 2   &ndash;&gt;-->
-<!--                <div class=e88_434>-->
-<!--                    <div class="ei88_434_36_133"></div>-->
-<!--                    <div class=ei88_434_36_134><span class="ei88_434_36_135">Linux</span><span class="ei88_434_36_136">Details of what to do.</span>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class=e88_435>-->
-<!--                    <div class="ei88_435_36_143"></div>-->
-<!--                    <div class=ei88_435_36_144><span class="ei88_435_36_145">Android</span><span-->
-<!--                            class="ei88_435_36_146">Details of what not to do.</span>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class=e88_436>-->
-<!--                    <div class="ei88_436_36_143"></div>-->
-<!--                    <div class=ei88_436_36_144><span class="ei88_436_36_145">C Programming</span><span-->
-<!--                            class="ei88_436_36_146">Details of what not to do.</span></div>-->
-<!--                </div>-->
-<!--                <div class=e88_437>-->
-<!--                    <div class="ei88_437_36_143"></div>-->
-<!--                    <div class=ei88_437_36_144><span class="ei88_437_36_145">OS</span><span class="ei88_437_36_146">Details of what not to do.</span>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
             <div class=e89_400>
                 <div class=e89_401>
@@ -106,9 +85,59 @@
                         </div>
                     </div>
                 </div>
+                <div class=e89_500>
+                    <div class=e89_501><span class="ei89_501_89_482">Mobile Responsive</span><span
+                            class="ei89_501_89_483">Description</span>
+                    </div>
+                    <div class=e89_535><span class="ei89_535_89_482">Mobile Responsive</span><span
+                            class="ei89_535_89_483">Description</span>
+                    </div>
+                    <div class=e89_502><span class="ei89_502_89_482">Mobile Responsive</span><span
+                            class="ei89_502_89_483">Description</span>
+                    </div>
+                    <div class=e89_538>
+                        <div class=e89_546>
+                            <div class="ei89_546_89_542"></div>
+                            <div class="ei89_546_89_543"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class=e89_500>
+                    <div class=e89_501><span class="ei89_501_89_482">Mobile Responsive</span><span
+                            class="ei89_501_89_483">Description</span>
+                    </div>
+                    <div class=e89_535><span class="ei89_535_89_482">Mobile Responsive</span><span
+                            class="ei89_535_89_483">Description</span>
+                    </div>
+                    <div class=e89_502><span class="ei89_502_89_482">Mobile Responsive</span><span
+                            class="ei89_502_89_483">Description</span>
+                    </div>
+                    <div class=e89_538>
+                        <div class=e89_546>
+                            <div class="ei89_546_89_542"></div>
+                            <div class="ei89_546_89_543"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class=e89_5001>
+                    <div class=e89_501><span class="ei89_501_89_482">Mobile Responsive</span><span
+                            class="ei89_501_89_483">Description</span>
+                    </div>
+                    <div class=e89_535><span class="ei89_535_89_482">Mobile Responsive</span><span
+                            class="ei89_535_89_483">Description</span>
+                    </div>
+                    <div class=e89_502><span class="ei89_502_89_482">Mobile Responsive</span><span
+                            class="ei89_502_89_483">Description</span>
+                    </div>
+                    <div class=e89_538>
+                        <div class=e89_546>
+                            <div class="ei89_546_89_542"></div>
+                            <div class="ei89_546_89_543"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<footer th:replace="fragments/footer :: commonFooter"></footer>
 </html>

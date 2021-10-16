@@ -673,19 +673,11 @@
 	position: absolute;
 	left: 0px;
 	top: 32px;
-}
-.ei35_660_35_633 {
-	width:91px;
-	height:58px;
-	position:absolute;
-	left:0px;
-	top:0px;
+	font-size: 40px;
 	font-family:Nanum Myeongjo;
 	text-align:left;
-	font-size:40px;
-	letter-spacing:0;
-	border: 0px;
 }
+
 .e35_661 {
 	width:511px;
 	height:28px;
@@ -696,7 +688,7 @@
 select {
 	width: 150px;
 	height: 28px;
-	font-size: 14px;
+	font-size: 12px;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;

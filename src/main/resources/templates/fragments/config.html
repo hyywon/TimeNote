@@ -6,10 +6,15 @@
   <th:block th:fragment="configFragment">
     <!-- 공통 css -->
     <!-- Content Page의 CSS fragment 삽입 -->
+    <link rel="stylesheet" th:href="@{/css/header.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/css/footer.css}" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet"/>
+
     <!-- Content Page의 script fragment 삽입 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <th:block layout:fragment="css"></th:block>
+
     <th:block layout:fragment="script"></th:block>
 
   </th:block>
