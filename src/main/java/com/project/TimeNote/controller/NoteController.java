@@ -23,6 +23,7 @@ public class NoteController {
     @GetMapping({"","/"})
     public String index(Model model){
         model.addAttribute("subjects", subjectService.가져오기());
+        model.addAttribute("notes", noteService.가져오기());
         return "index";
     }
 
