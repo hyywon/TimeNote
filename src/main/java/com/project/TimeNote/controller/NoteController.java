@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -33,6 +34,13 @@ public class NoteController {
         model.addAttribute("subjects", subjectService.가져오기());
 
         return "note";
+    }
+
+    @GetMapping("/detail")
+    public String DetailNote(Model model, @RequestParam String id){
+        Integer ID = Integer.parseInt(id);
+        model.addAttribute("note", noteService.상세보기(ID));
+        return "detail";
     }
 
     @GetMapping("/time")

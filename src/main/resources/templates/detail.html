@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default_layout}">
+<head>
+    <title>TimeNote</title>
+</head>
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" href="/css/detail.css">
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            background: #E5E5E5;
+            font-family: Nanum Myeongjo;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</th:block>
+
+<th:block layout:fragment="script">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</th:block>
+<div layout:fragment="content">
+    <div class=e267_350>
+        <div class=e267_372>
+            <div class=e267_373>
+                <div class=e267_374>
+                    <div class=e267_376>
+                        <span th:text="${note.title}" class="ei267_376_35_633"></span>
+                    </div>
+                    <div class=e267_375>
+                        <span th:text="${note.create_at}" class="ei267_375_35_631"></span>
+                    </div>
+                    <div class=e267_377>
+                        <div class=e267_378><span class="ei267_378_35_635">Tag</span></div>
+                        <div class=e267_379><span class="ei267_379_35_635">Tag</span></div>
+                        <div class=e267_380><span class="ei267_380_35_635">Tag</span></div>
+                    </div>
+                </div>
+                <div class=e267_381>
+                    <span th:utext="${note.content}" class="ei267_381_35_639"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

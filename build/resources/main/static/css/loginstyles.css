@@ -26,6 +26,8 @@
 	width:506.0000305175781px;
 	height:468px;
 	position:absolute;
+	display: flex;
+	justify-content: center;
 	left:0px;
 	top:0px;
 	border-top-left-radius:328px;

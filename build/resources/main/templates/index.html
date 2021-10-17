@@ -42,7 +42,7 @@
             </div>
             <div class=e89_400>
                 <div class=e89_401>
-                    <div th:each="note : ${notes}" class=card>
+                    <div th:each="note : ${notes}" class=card style="cursor: pointer;" th:onclick="|location.href='/detail?id=${note.id}'|">
                             <span th:text="${note.title}" class="noteTitle"></span>
                             <span th:text="${note.create_at}" class="noteDate"></span>
                     </div>

@@ -23,6 +23,15 @@ public class NoteService {
         return noteRepository.findAll();
     }
 
+    @Transactional(readOnly = true)
+    public NoteEntity 상세보기(Integer id){
+
+        NoteEntity note =  noteRepository.findById(id).orElseGet(()->{
+            return null;
+        });
+        return note;
+    }
+
     @Transactional
     public ResponseDto<Integer> 작성하기(NoteSaveDto noteSaveDto){
         noteRepository.noteSave(noteSaveDto.getTitle(), noteSaveDto.getContent(), noteSaveDto.getSubject_id());
