@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" ₩
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout/default_layout}">
+<sec:authorize access="isAuthenticated()">
+    <sec:authentication property="principal" var="principal">
+    </sec:authentication>
+</sec:authorize>
 <head>
     <title>TimeNote</title>
 </head>
@@ -30,21 +35,24 @@
             <!--   과목 리스트   -->
             <div class=e88_432>
                 <!--   과목 1   -->
-                <div th:each="sub : ${subjects}">
+                <div th:each="sub : ${subjects}" th:if="${sub.user.username == user?.name}">
                     <div class=e88_433>
                         <div class="ei88_433_36_138"></div>
                         <div class=ei88_433_36_139><span th:text="${sub.name}" class="ei88_433_36_140"></span>
                             <span th:text="${sub.getDay()} + ' ' + ${sub.getStart_class()} +'-' + ${sub.getFinish_class()} "
-                                  class="ei88_433_36_141">Think about this thing.</span>
+                                  class="ei88_433_36_141">Think about this  thing.</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class=e89_400>
                 <div class=e89_401>
-                    <div th:each="note : ${notes}" class=card style="cursor: pointer;" th:onclick="|location.href='/detail?id=${note.id}'|">
-                            <span th:text="${note.title}" class="noteTitle"></span>
-                            <span th:text="${note.create_at}" class="noteDate"></span>
+                    <div th:each="note : ${notes}" th:if="${note.user.username == user?.name}"
+                         class=card style="cursor: pointer;" th:onclick="|location.href='/detail?id=${note.id}'|">
+                                <span th:text="${note.title}" class="noteTitle"></span>
+                                <span th:text="${note.create_at}" class="noteDate"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

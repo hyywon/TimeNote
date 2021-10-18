@@ -21,6 +21,7 @@ public class PrincipalDetail implements UserDetails {
         this.user = user;
     }
 
+
     @Override
     public String getPassword() {
         return user.getPassword();

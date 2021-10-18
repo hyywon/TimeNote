@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "NOTE")
@@ -30,13 +31,13 @@ public class NoteEntity {
     String content;
 
     @CreationTimestamp //시간 자동 입력
-    private Timestamp create_at;
+    private LocalDateTime create_at;
 
-//    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "user_id")
-//    private UserEntity user;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "subject_id")
     private SubjectEntity subject;
 
@@ -44,6 +45,7 @@ public class NoteEntity {
         this.title = title;
         this.content = content;
         this.subject = subject;
+        this.create_at = LocalDateTime.now();
     }
 
 }

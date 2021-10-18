@@ -1,6 +1,9 @@
 package com.project.TimeNote.domain.subject;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.project.TimeNote.domain.note.NoteEntity;
+import com.project.TimeNote.domain.user.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -11,6 +14,7 @@ import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Table(name = "SUBJECT")
@@ -36,6 +40,14 @@ public class SubjectEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "day")
     private Days day;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "subject", cascade = CascadeType.REMOVE) // 연관관계의 주인 X
+    @JsonIgnoreProperties({"note","user"})
+    private List<NoteEntity> notes;
 
     @JsonFormat(pattern="HH:MM")
     @Column(name = "start_class")
