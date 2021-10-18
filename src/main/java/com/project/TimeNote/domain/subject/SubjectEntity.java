@@ -46,7 +46,7 @@ public class SubjectEntity {
     private UserEntity user;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "subject", cascade = CascadeType.REMOVE) // 연관관계의 주인 X
-    @JsonIgnoreProperties({"note","user"})
+    @JsonIgnoreProperties({"subject","user"})
     private List<NoteEntity> notes;
 
     @JsonFormat(pattern="HH:MM")

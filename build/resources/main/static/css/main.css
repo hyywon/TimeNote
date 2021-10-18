@@ -8,6 +8,14 @@
 	height:1024px;
 	position:absolute;
 }
+.e88{
+	width: 200px;
+	height: auto;
+	min-height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 50px;
+}
 .e88_431 { 
 	width:1260px;
 	height:auto;
@@ -16,55 +24,54 @@
 	left:90px;
 	top:122px;
 }
-.e88_432 { 
+
+.e88_432 {
 	width:197px;
-	height:460px;
+	height:auto;
+	min-height: 100%;
 	position:absolute;
 	left:0px;
 	top:50px;
+	display: inline-flex;
+	flex-flow: column wrap;
+	align-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
-.e88_433 { 
+
+.subject {
 	box-shadow:0px 0px 1px rgba(55.00000052154064, 56.000000461936, 60.00000022351742, 0.23999999463558197);
 	background-color:rgba(255, 255, 255, 1);
 	width:197px;
 	height:84px;
-	position:absolute;
-	left:0px;
-	top:0px;
+	margin-bottom: 20px;
 }
 .ei88_433_36_138 { 
 	background-color:rgba(24.000000469386578, 160.00000566244125, 251.00000023841858, 1);
 	width:197px;
 	height:8px;
-	position:absolute;
-	left:0px;
-	top:0px;
 }
-.ei88_433_36_139 { 
+.subCard {
 	width:197px;
 	height:76px;
-	position:absolute;
-	left:0px;
-	top:8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
 }
-.ei88_433_36_140 { 
+.subTitle {
 	color:rgba(0, 0, 0, 1);
 	width:165px;
 	height:24px;
-	position:absolute;
-	left:16px;
-	top:16px;
 	text-align:left;
 	font-size:19px;
 	/*letter-spacing:-4px;*/
 }
-.ei88_433_36_141 { 
+	.subTime {
 	color:rgba(0, 0, 0, 0.5);
 	width:165px;
 	height:20px;
-	position:absolute;
-	left:16px;
-	top:40px;
 	text-align:left;
 	font-size:14px;
 	/*letter-spacing:-2;*/

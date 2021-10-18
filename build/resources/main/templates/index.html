@@ -33,15 +33,15 @@
     <div class="e88_333">
         <div class=e88_431>
             <!--   과목 리스트   -->
-            <div class=e88_432>
-                <!--   과목 1   -->
-                <div th:each="sub : ${subjects}" th:if="${sub.user.username == user?.name}">
-                    <div class=e88_433>
-                        <div class="ei88_433_36_138"></div>
-                        <div class=ei88_433_36_139><span th:text="${sub.name}" class="ei88_433_36_140"></span>
-                            <span th:text="${sub.getDay()} + ' ' + ${sub.getStart_class()} +'-' + ${sub.getFinish_class()} "
-                                  class="ei88_433_36_141">Think about this  thing.</span>
-                        </div>
+            <div class=e88>
+                <div class=e88_432>
+                    <!--   과목 1   -->
+                    <div th:each="sub : ${subjects}" th:if="${sub.user.username == user?.name}" class="subject">
+                            <div class="ei88_433_36_138"></div>
+                            <div class="subCard">
+                                <span th:text="${sub.name}" class="subTitle"></span>
+                                <span th:text="${sub.getDay()} + ' ' + ${sub.getStart_class()} +'-' + ${sub.getFinish_class()}" class="subTime"></span>
+                            </div>
                     </div>
                 </div>
             </div>

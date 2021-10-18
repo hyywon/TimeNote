@@ -6,11 +6,11 @@ import lombok.Getter;
 
 public enum Days {
         월,
-        Tue,
-        Wed,
-        Thu,
-        Fri,
-        Sat,
-        Sun;
+        화,
+        수,
+        목,
+        금,
+        토,
+        일;
 
 }
