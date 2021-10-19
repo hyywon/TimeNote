@@ -7,10 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
 import java.security.Principal;
 
 @Controller
-public class NoteController {
+public class SubjectController {
 
     @Autowired
     private NoteService noteService;
@@ -18,28 +19,25 @@ public class NoteController {
     @Autowired
     private SubjectService subjectService;
 
-    @GetMapping({"","/"})
-    public String index(Model model, Principal principal){
+    @GetMapping({"/sub"})
+    public String index(Model model, Principal principal, @RequestParam String id){
+        Integer ID = Integer.parseInt(id);
         model.addAttribute("subjects", subjectService.가져오기());
-        model.addAttribute("notes", noteService.가져오기());
+        model.addAttribute("notes", noteService.과목별가져오기(ID));
         model.addAttribute("user", principal);
         return "index";
     }
 
+    @GetMapping("/time")
+    public String TimeTable(){
 
-    @GetMapping("/note")
-    public String Note(Model model) {
-        model.addAttribute("subjects", subjectService.가져오기());
-
-        return "note";
+        return "timetable";
     }
 
-    @GetMapping("/detail")
-    public String DetailNote(Model model, @RequestParam String id){
-        Integer ID = Integer.parseInt(id);
-        model.addAttribute("note", noteService.상세보기(ID));
-        return "detail";
-    }
+    @GetMapping("/addTime")
+    public String AddTime(){
 
+        return "addTime";
+    }
 
 }

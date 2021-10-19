@@ -36,7 +36,8 @@
             <div class=e88>
                 <div class=e88_432>
                     <!--   과목 1   -->
-                    <div th:each="sub : ${subjects}" th:if="${sub.user.username == user?.name}" class="subject">
+                    <div th:each="sub : ${subjects}" th:if="${sub.user.username == user?.name}" class="subject"
+                         style="cursor: pointer;" th:onclick="|location.href='/sub?id=${sub.id}'|">
                             <div class="ei88_433_36_138"></div>
                             <div class="subCard">
                                 <span th:text="${sub.name}" class="subTitle"></span>

@@ -5,6 +5,7 @@ import com.project.TimeNote.domain.note.NoteRepository;
 import com.project.TimeNote.dto.ResponseDto;
 import com.project.TimeNote.dto.note.NoteSaveDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +23,13 @@ public class NoteService {
 
         return noteRepository.findAll();
     }
+
+    @Transactional(readOnly = true)
+    public List<NoteEntity> 과목별가져오기(Integer id){
+
+        return noteRepository.findBySubjectId(id);
+    }
+
 
     @Transactional(readOnly = true)
     public NoteEntity 상세보기(Integer id){
