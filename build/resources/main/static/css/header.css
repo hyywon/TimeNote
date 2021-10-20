@@ -248,7 +248,8 @@
     width:29px;
     height:28px;
     position:absolute;
-    left:11px;
+    margin-right: 25px;
+    margin-top: 12px;
     top:0px;
 }
 .ei88_347_3_76 {
@@ -265,30 +266,6 @@
     position:absolute;
     left:0.5958904027938843px;
     top:19.849313735961914px;
-}
-.ei88_347_3_78 {
-    background-color:rgba(241.00000083446503, 120.00000044703484, 182.00000435113907, 1);
-    width:8.441781044006348px;
-    height:20.136985778808594px;
-    position:absolute;
-    left:1.0357143878936768px;
-    top:0px;
-}
-.ei88_347_3_79 {
-    background-color:rgba(120.00000044703484, 121.00000038743019, 241.00000083446503, 1);
-    width:18.27397346496582px;
-    height:8.150684356689453px;
-    position:absolute;
-    left:10.130138397216797px;
-    top:0px;
-}
-.ei88_347_3_80 {
-    background-color:rgba(165.00000536441803, 166.00000530481339, 246.0000005364418, 1);
-    width:8.441783905029297px;
-    height:20.136985778808594px;
-    position:absolute;
-    left:19.962326049804688px;
-    top:7.383562088012695px;
 }
 .e88_348 {
     color:rgba(24.000000469386578, 25.000000409781933, 31.000000052154064, 1);
