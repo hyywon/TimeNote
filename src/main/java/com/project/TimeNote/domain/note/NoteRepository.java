@@ -11,8 +11,8 @@ import java.util.List;
 public interface NoteRepository extends JpaRepository<NoteEntity, Integer> {
 
     @Modifying
-    @Query(value="INSERT INTO note(title, content, subject_id) VALUES(?1,?2,?3)", nativeQuery = true)
-    int noteSave(String title, String content,Integer subject_id);
+    @Query(value="INSERT INTO note(title, content, subject_id, user_id) VALUES(?1,?2,?3,?4)", nativeQuery = true)
+    int noteSave(String title, String content,Integer subject_id, Integer user_id);
 
     List<NoteEntity> findBySubjectId(Integer id);
 

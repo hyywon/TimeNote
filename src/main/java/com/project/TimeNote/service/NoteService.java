@@ -2,6 +2,8 @@ package com.project.TimeNote.service;
 
 import com.project.TimeNote.domain.note.NoteEntity;
 import com.project.TimeNote.domain.note.NoteRepository;
+import com.project.TimeNote.domain.user.UserEntity;
+import com.project.TimeNote.domain.user.UserRepository;
 import com.project.TimeNote.dto.ResponseDto;
 import com.project.TimeNote.dto.note.NoteSaveDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,9 @@ public class NoteService {
 
     @Autowired
     private NoteRepository noteRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @Transactional(readOnly = true)
     public List<NoteEntity> 가져오기(){
@@ -42,7 +47,11 @@ public class NoteService {
 
     @Transactional
     public ResponseDto<Integer> 작성하기(NoteSaveDto noteSaveDto){
-        noteRepository.noteSave(noteSaveDto.getTitle(), noteSaveDto.getContent(), noteSaveDto.getSubject_id());
+        System.out.println(noteSaveDto.getUser_id());
+        UserEntity user = userRepository.findByUsername(noteSaveDto.getUser_id()).orElseGet(()->{
+            return null;
+        });
+        noteRepository.noteSave(noteSaveDto.getTitle(), noteSaveDto.getContent(), noteSaveDto.getSubject_id(), user.getId());
 
         return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
     }

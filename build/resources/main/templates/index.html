@@ -37,7 +37,7 @@
                 <div class=e88>
                     <div class=e88_432>
                         <!--   과목 1   -->
-                        <div th:each="sub : ${subjects}" th:if="${sub.user.username == user?.name}" class="subject"
+                        <div th:each="sub : ${subjects}" th:if="${sub.user?.username == user?.name}" class="subject"
                              style="cursor: pointer;" th:onclick="|location.href='/sub?id=${sub.id}'|">
                             <div class="ei88_433_36_138"></div>
                             <div class="subCard">
@@ -50,7 +50,7 @@
                 </div>
                 <div class=e89_400>
                     <div class=e89_401>
-                        <div th:each="note : ${notes}" th:if="${note.user.username == user?.name}"
+                        <div th:each="note : ${notes}" th:if="${note.user?.username == user?.name}"
                              class=card style="cursor: pointer;" th:onclick="|location.href='/detail?id=${note.id}'|">
                             <span th:text="${note.title}" class="noteTitle"></span>
                             <span th:text="${note.create_at}" class="noteDate"></span>

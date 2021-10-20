@@ -28,8 +28,9 @@ public class NoteController {
 
 
     @GetMapping("/note")
-    public String Note(Model model) {
+    public String Note(Model model, Principal principal) {
         model.addAttribute("subjects", subjectService.가져오기());
+        model.addAttribute("user", principal);
 
         return "note";
     }

@@ -22,7 +22,7 @@ public class NoteApiController {
 
     @PostMapping("/note/add")
     public ResponseDto<Integer> addNote(@RequestBody NoteSaveDto note){
-        System.out.println(note.getTitle() + note.getContent() + note.getSubject_id());
+        System.out.println(note.getTitle() + note.getContent() + note.getSubject_id() + note.getUser_id());
         noteService.작성하기(note);
         return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
     }

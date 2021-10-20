@@ -12,6 +12,7 @@ public class NoteSaveDto {
     private String title;
     private String content;
     private Integer subject_id;
+    private String user_id;
 
 }
 

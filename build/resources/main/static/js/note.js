@@ -2,11 +2,12 @@ seehtml = function (editor) {
     alert(editor.getHTML());
     const title = document.getElementById('title').value;
     const sub = document.getElementById('selectSub').value;
-
+    const user = document.getElementById('user_id').innerHTML;
     let data = {
         title: title,
         content: editor.getHTML(),
         subject_id: Number(sub),
+        user_id: user
     }
 
     console.log(data);
