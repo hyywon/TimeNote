@@ -27,7 +27,7 @@
 <th:block layout:fragment="script">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 </th:block>
-
+<!-- 너비 149 높이 50 -->
 <div layout:fragment="content">
     <div class=e3_3>
         <div class=e32_71>
@@ -51,22 +51,30 @@
                         <tr>
                             <th>
                                 <div class="times">
-                                    <div class="e32_90 time">9 AM</div>
-                                    <div class="e32_96 time">10 AM</div>
-                                    <div class="e32_101 time">11 AM</div>
-                                    <div class="e32_106 time">12 PM</div>
-                                    <div class="e32_111 time">1 PM</div>
-                                    <div class="e32_116 time">2 PM</div>
-                                    <div class="e32_121 time">3 PM</div>
-                                    <div class="e32_126 time">4 PM</div>
-                                    <div class="e32_131 time">5 PM</div>
-                                    <div class="e32_136 time">6 PM</div>
-                                    <div class="e32_141 time">7 PM</div>
-                                    <div class="e32_146 time">8 PM</div>
+                                    <div value="9" class="e32_90 time">9 AM</div>
+                                    <div value="10" class="e32_96 time">10 AM</div>
+                                    <div value="11" class="e32_101 time">11 AM</div>
+                                    <div value="12" class="e32_106 time">12 PM</div>
+                                    <div value="13" class="e32_111 time">1 PM</div>
+                                    <div value="14" class="e32_116 time">2 PM</div>
+                                    <div value="15" class="e32_121 time">3 PM</div>
+                                    <div value="16" class="e32_126 time">4 PM</div>
+                                    <div value="17" class="e32_131 time">5 PM</div>
+                                    <div value="18" class="e32_136 time">6 PM</div>
+                                    <div value="19" class="e32_141 time">7 PM</div>
+                                    <div value="20" class="e32_146 time">8 PM</div>
                                 </div>
                             </th>
-                            <td>
-                                <div class="col"></div>
+                            <td class="월">
+                                <div th:each="subMon : ${mon}" class="col">
+                                    <div th:value="${subMon.getClassHeight()}" style="height:94px"  class="sub">
+                                        <span style="display: none" th:value="${subMon.getStart()}" class="position"></span>
+                                        <h5 class="title" th:text="${subMon.name}"></h5>
+                                        <p class="subTime">
+                                            <em th:text="${subMon.professor}"></em>
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="grid">
                                     <div class="grids"></div>
                                     <div class="grids"></div>
@@ -83,8 +91,16 @@
 
                                 </div>
                             </td>
-                            <td>
-                                <div class="col"></div>
+                            <td class="화">
+                                <div th:each="subTue : ${tue}" class="col">
+                                    <div th:value="${subTue.getClassHeight()}" style="height:94px" class="sub">
+                                        <span style="display: none" th:value="${subTue.getStart()}" class="position"></span>
+                                        <h5 class="title" th:text="${subTue.name}"></h5>
+                                        <p class="subTime">
+                                            <em th:text="${subTue.professor}"></em>
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="grid">
                                     <div class="grids"></div>
                                     <div class="grids"></div>
@@ -101,8 +117,16 @@
                                 </div>
 
                             </td>
-                            <td>
-                                <div class="col"></div>
+                            <td class="수">
+                                <div th:each="subWed : ${wed}" class="col">
+                                    <div th:value="${subWed.getClassHeight()}" class="sub">
+                                        <span style="display: none" th:value="${subWed.getStart()}" class="position"></span>
+                                        <h5 class="title" th:text="${subWed.name}"></h5>
+                                        <p class="subTime">
+                                            <em th:text="${subWed.professor}"></em>
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="grid">
                                     <div class="grids"></div>
                                     <div class="grids"></div>
@@ -119,8 +143,18 @@
                                 </div>
 
                             </td>
-                            <td>
-                                <div class="col"></div>
+                            <td class="목">
+                                <div class="col">
+                                    <div th:each="subThu : ${thu}" class="col">
+                                        <div th:value="${subThu.getClassHeight()}" class="sub">
+                                            <span style="display: none" th:value="${subThu.getStart()}" class="position"></span>
+                                            <h5 class="title" th:text="${subThu.name}"></h5>
+                                            <p class="subTime">
+                                                <em th:text="${subThu.professor}"></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="grid">
                                     <div class="grids"></div>
                                     <div class="grids"></div>
@@ -138,8 +172,18 @@
                                 </div>
 
                             </td>
-                            <td>
-                                <div class="col"></div>
+                            <td class="금">
+                                <div class="col">
+                                    <div th:each="subFri : ${fri}" class="col">
+                                        <div th:value="${subFri.getClassHeight()}" class="sub">
+                                            <span style="display: none" th:value="${subFri.getStart()}" class="position"></span>
+                                            <h5 class="title" th:text="${subFri.name}"></h5>
+                                            <p class="subTime">
+                                                <em th:text="${subFri.professor}"></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="grid">
                                     <div class="grids"></div>
                                     <div class="grids"></div>
@@ -158,8 +202,8 @@
 
                             </td>
                         </tr>
-
                         </tbody>
+                        <script src="/js/timetable.js"></script>
                     </table>
                 </div>
             </div>

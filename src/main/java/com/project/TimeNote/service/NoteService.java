@@ -7,7 +7,6 @@ import com.project.TimeNote.domain.user.UserRepository;
 import com.project.TimeNote.dto.ResponseDto;
 import com.project.TimeNote.dto.note.NoteSaveDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -51,7 +50,7 @@ public class NoteService {
         UserEntity user = userRepository.findByUsername(noteSaveDto.getUser_id()).orElseGet(()->{
             return null;
         });
-        noteRepository.noteSave(noteSaveDto.getTitle(), noteSaveDto.getContent(), noteSaveDto.getSubject_id(), user.getId());
+        noteRepository.noteSave(noteSaveDto.getTitle(), noteSaveDto.getContent(), noteSaveDto.getSubject_id(), user.getId(), noteSaveDto.getCreate_at());
 
         return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
     }

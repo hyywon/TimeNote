@@ -29,7 +29,13 @@ public class SubjectController {
     }
 
     @GetMapping("/time")
-    public String TimeTable(){
+    public String TimeTable(Model model, Principal principal){
+        model.addAttribute("mon", subjectService.월요일가져오기());
+        model.addAttribute("tue", subjectService.화요일가져오기());
+        model.addAttribute("wed", subjectService.수요일가져오기());
+        model.addAttribute("thu", subjectService.목요일가져오기());
+        model.addAttribute("fri", subjectService.금요일가져오기());
+        model.addAttribute("user", principal);
 
         return "timetable";
     }

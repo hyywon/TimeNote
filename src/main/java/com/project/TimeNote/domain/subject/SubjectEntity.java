@@ -78,4 +78,27 @@ public class SubjectEntity {
     public String getFinish_class() {
         return finish_class.substring(0,5);
     }
+
+    public Integer getClassHeight(){
+        Integer startH = Integer.parseInt(start_class.substring(0,2));
+        Integer startM = Integer.parseInt(start_class.substring(3,5));
+
+        Integer finishH = Integer.parseInt(finish_class.substring(0, 2));
+        Integer finishM = Integer.parseInt(finish_class.substring(3, 5));
+
+        System.out.println(startM + " - " + finishM );
+
+        Integer height = (finishH - startH) * 50;
+
+        return height;
+    }
+
+    public Integer getStart(){
+
+        Integer start =  Integer.parseInt(start_class.substring(0, 2));
+        Integer position = (start - 9) * 50;
+
+        return position;
+    }
+
 }
