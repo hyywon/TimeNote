@@ -48,4 +48,10 @@ public class NoteEntity {
         this.create_at = LocalDateTime.now();
     }
 
+    public void edit(String title, String content, SubjectEntity subject){
+        this.setTitle(title);
+        this.setContent(content);
+        this.setSubject(subject);
+    }
+
 }

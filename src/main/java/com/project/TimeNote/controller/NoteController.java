@@ -42,5 +42,15 @@ public class NoteController {
         return "detail";
     }
 
+    @GetMapping("/note/update")
+    public String UpdateNote(Model model, @RequestParam Integer id, Principal principal){
+        model.addAttribute("note", noteService.상세보기(id));
+        model.addAttribute("user", principal);
+        model.addAttribute("subjects", subjectService.가져오기());
+
+        return "noteUpdate";
+
+    }
+
 
 }

@@ -15,6 +15,8 @@ public interface NoteRepository extends JpaRepository<NoteEntity, Integer> {
     @Query(value="INSERT INTO note(title, content, subject_id, user_id, create_at) VALUES(?1,?2,?3,?4,?5)", nativeQuery = true)
     int noteSave(String title, String content, Integer subject_id, Integer user_id, LocalDateTime create_at);
 
+
+
     List<NoteEntity> findBySubjectId(Integer id);
 
 }

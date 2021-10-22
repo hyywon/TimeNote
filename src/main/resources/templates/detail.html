@@ -31,20 +31,29 @@
             <div class=e267_373>
                 <div class=e267_374>
                     <div class=e267_376>
+                        <form>
+                            <input id="noteId" type="hidden" th:value="${note.id}">
+                        </form>
                         <span th:text="${note.title}" class="ei267_376_35_633"></span>
                     </div>
                     <div class=e267_375>
-                        <span th:text="${note.create_at}" class="ei267_375_35_631"></span>
+                        <div class="e267_383">
+                            <span th:text="${note.create_at}" class="ei267_375_35_631"></span>
+                        </div>
+                        <div class=e267_382>
+                            <button th:onclick="|location.href='/note/update?id=${note.id}'|" class="e35_670">수정
+                            </button>
+                            <button id="btn-delete" class="e35_671">삭제</button>
+                        </div>
+                        <script src="/js/deleteNote.js"></script>
+
                     </div>
                     <div class=e267_377>
                         <div class=e267_378><span class="ei267_378_35_635">Tag</span></div>
                         <div class=e267_379><span class="ei267_379_35_635">Tag</span></div>
                         <div class=e267_380><span class="ei267_380_35_635">Tag</span></div>
                     </div>
-                </div>
-                <div class=e267_382>
-                    <button class="e35_670" >수정</button>
-                    <button class="e35_671" >삭제</button>
+
                 </div>
                 <div class=e267_381>
                     <div th:utext="${note.content}" class="ei267_381_35_639"></div>

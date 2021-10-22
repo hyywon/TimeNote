@@ -242,7 +242,7 @@
 }
 .ei267_376_35_633 { 
 	color:rgba(0, 0, 0, 1);
-	width:100%;
+	width:50%;
 	height:58px;
 	position:absolute;
 	left:0px;
@@ -255,18 +255,15 @@
 .e267_375 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:100%;
-	height:20px;
+	height:30px;
 	position:absolute;
 	left:0px;
 	top:80px;
 }
 .ei267_375_35_631 { 
 	color:rgba(88.18749949336052, 88.18749949336052, 88.18749949336052, 1);
-	width:100%	;
+	width:50%;
 	height:20px;
-	position:absolute;
-	left:0px;
-	top:0px;
 	font-family:Nanum Myeongjo;
 	text-align:left;
 	font-size:14px;
@@ -356,9 +353,36 @@
 	width:100%;
 	height:auto;
 }
+.e267_382{
+	float: right;
+	width: 50%;
+	height: 30px;
+
+}
+
+.e267_383{
+	float: left;
+	width: 50%;
+	height: 30px;
+
+}
 .ei267_381_35_639 { 
 	width:100%;
 	height:auto;
 	font-size:16px;
 	margin-bottom: 100px;
+}
+.e35_670 {
+	float: right;
+	border: none;
+	width: 20%;
+	height: 100%;
+	background: none;
+}
+.e35_671 {
+	float: right;
+	border: none;
+	width: 20%;
+	height: 100%;
+	background: none;
 }
