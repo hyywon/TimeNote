@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="/css/styles.css">
     <style>
         html, body {
+            overflow-y: initial;
             height: 100%;
             width: 100%;
-            background: #E5E5E5;
             font-family: Nanum Myeongjo;
             margin: 0;
             padding: 0;
@@ -72,7 +72,6 @@
                     </div>
                 </div>
             </div>
-            <button onclick='seehtml(editor)'>저장하기</button>
             <div class=e37_204>
                 <div class=e35_657>
                     <div class=e35_658>
@@ -105,6 +104,8 @@
                     <div id="editor" class=e35_665>
                         <span class="ei35_665_35_639">Enter your notes</span>
                     </div>
+                    <button class="e35_670" onclick='seehtml(editor)'>저장하기</button>
+
                 </div>
                 <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
                 <script src="/js/note.js"></script>
@@ -112,7 +113,8 @@
                     const Editor = toastui.Editor;
                     const editor = new Editor({
                         el: document.querySelector('#editor'),
-                        height: '500px',
+                        minHeight: '500px',
+                        height: 'auto',
                         initialEditType: 'markdown',
                         previewStyle: 'vertical'
                     });

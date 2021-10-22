@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="/css/detail.css">
     <style>
         html, body {
+            overflow-y: initial;
             height: 100%;
             width: 100%;
-            background: #E5E5E5;
             font-family: Nanum Myeongjo;
             margin: 0;
             padding: 0;
@@ -42,8 +42,12 @@
                         <div class=e267_380><span class="ei267_380_35_635">Tag</span></div>
                     </div>
                 </div>
+                <div class=e267_382>
+                    <button class="e35_670" >수정</button>
+                    <button class="e35_671" >삭제</button>
+                </div>
                 <div class=e267_381>
-                    <span th:utext="${note.content}" class="ei267_381_35_639"></span>
+                    <div th:utext="${note.content}" class="ei267_381_35_639"></div>
                 </div>
             </div>
         </div>

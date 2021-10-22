@@ -1,10 +1,7 @@
 .e267_350 {
-	overflow:hidden;
-}
-.e267_350 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:1440px;
-	height:1024px;
+	height:100%;
 	position:absolute;
 }
 .e267_351 { 
@@ -209,25 +206,31 @@
 	letter-spacing:0;
 }
 .e267_372 { 
-	width:698px;
-	height:805px;
+	width:1020px;
+	height:100%;
 	position:absolute;
-	left:371px;
+	left:300px;
 	top:146px;
 }
 .e267_373 { 
-	width:620px;
-	height:800px;
-	position:absolute;
+	width:820px;
 	left:39px;
 	top:5px;
+	min-height: 100%;
+	height: auto;
+	position: absolute;
+
+	display: inline-flex;
+	flex-flow: column wrap;
+	align-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin-bottom: 80px;
+
 }
 .e267_374 { 
-	width:620px;
+	width:100%;
 	height:160px;
-	position:absolute;
-	left:0px;
-	top:0px;
 }
 .e267_376 { 
 	background-color:rgba(255, 255, 255, 1);
@@ -350,21 +353,12 @@
 }
 .e267_381 { 
 	background-color:rgba(255, 255, 255, 1);
-	width:620px;
-	height:48px;
-	position:absolute;
-	left:0px;
-	top:181px;
+	width:100%;
+	height:auto;
 }
 .ei267_381_35_639 { 
-	color:rgba(0, 0, 0, 1);
 	width:100%;
-	height:24px;
-	position:absolute;
-	left:0px;
-	top:0px;
-	font-family:Nanum Myeongjo;
-	text-align:left;
+	height:auto;
 	font-size:16px;
-	letter-spacing:0;
+	margin-bottom: 100px;
 }
