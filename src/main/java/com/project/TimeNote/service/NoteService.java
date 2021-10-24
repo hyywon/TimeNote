@@ -64,7 +64,7 @@ public class NoteService {
 
     @Transactional
     public void 삭제하기(Integer id){
-        userRepository.deleteById(id);
+        noteRepository.deleteById(id);
 
     }
 

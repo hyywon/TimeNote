@@ -1,10 +1,10 @@
 let index = {
     init: function () {
         $("#btn-delete").on("click", () => { //()=> : this 를 binding 하기 위해서 사용
-            this.delete();
+            this.warn();
         })
     },
-    delete: function () {
+    warn: function () {
         let id = $("#noteId").val();
         console.log(id);
         $.ajax({
@@ -18,7 +18,9 @@ let index = {
             alert("노트 삭제 완료");
             location.href = "/";
         }).fail(function(error){
-                alert(JSON.stringify(error));
+            console.log(JSON.stringify(error));
+
+            alert(JSON.stringify(error));
         });
     }
 
