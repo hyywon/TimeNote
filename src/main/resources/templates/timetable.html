@@ -66,8 +66,9 @@
                                 </div>
                             </th>
                             <td class="월">
-                                <div th:each="subMon : ${mon}" class="col">
-                                    <div th:value="${subMon.getClassHeight()}" style="height:94px"  class="sub">
+                                <div th:each="subMon : ${mon}" th:if="${subMon.user?.username == user?.name}" class="col">
+                                    <div th:value="${subMon.getClassHeight()}" style="height:94px" class="sub"
+                                         th:onclick="|location.href='/sub?id=${subMon.id}'|">
                                         <span style="display: none" th:value="${subMon.getStart()}" class="position"></span>
                                         <h5 class="title" th:text="${subMon.name}"></h5>
                                         <p class="subTime">
@@ -92,8 +93,9 @@
                                 </div>
                             </td>
                             <td class="화">
-                                <div th:each="subTue : ${tue}" class="col">
-                                    <div th:value="${subTue.getClassHeight()}" style="height:94px" class="sub">
+                                <div th:each="subTue : ${tue}" th:if="${subTue.user?.username == user?.name}" class="col">
+                                    <div th:value="${subTue.getClassHeight()}" style="height:94px" class="sub"
+                                         th:onclick="|location.href='/sub?id=${subTue.id}'|">
                                         <span style="display: none" th:value="${subTue.getStart()}" class="position"></span>
                                         <h5 class="title" th:text="${subTue.name}"></h5>
                                         <p class="subTime">
@@ -118,8 +120,9 @@
 
                             </td>
                             <td class="수">
-                                <div th:each="subWed : ${wed}" class="col">
-                                    <div th:value="${subWed.getClassHeight()}" class="sub">
+                                <div th:each="subWed : ${wed}" th:if="${subWed.user?.username == user?.name}" class="col">
+                                    <div th:value="${subWed.getClassHeight()}" class="sub"
+                                         th:onclick="|location.href='/sub?id=${subWed.id}'|">
                                         <span style="display: none" th:value="${subWed.getStart()}" class="position"></span>
                                         <h5 class="title" th:text="${subWed.name}"></h5>
                                         <p class="subTime">
@@ -145,8 +148,9 @@
                             </td>
                             <td class="목">
                                 <div class="col">
-                                    <div th:each="subThu : ${thu}" class="col">
-                                        <div th:value="${subThu.getClassHeight()}" class="sub">
+                                    <div th:each="subThu : ${thu}" th:if="${subThu.user?.username == user?.name}" class="col">
+                                        <div th:value="${subThu.getClassHeight()}" class="sub"
+                                             th:onclick="|location.href='/sub?id=${subThu.id}'|">
                                             <span style="display: none" th:value="${subThu.getStart()}" class="position"></span>
                                             <h5 class="title" th:text="${subThu.name}"></h5>
                                             <p class="subTime">
@@ -174,8 +178,9 @@
                             </td>
                             <td class="금">
                                 <div class="col">
-                                    <div th:each="subFri : ${fri}" class="col">
-                                        <div th:value="${subFri.getClassHeight()}" class="sub">
+                                    <div th:each="subFri : ${fri}" th:if="${subFri.user?.username == user?.name}" class="col">
+                                        <div th:value="${subFri.getClassHeight()}" class="sub"
+                                             th:onclick="|location.href='/sub?id=${subFri.id}'|">
                                             <span style="display: none" th:value="${subFri.getStart()}" class="position"></span>
                                             <h5 class="title" th:text="${subFri.name}"></h5>
                                             <p class="subTime">
