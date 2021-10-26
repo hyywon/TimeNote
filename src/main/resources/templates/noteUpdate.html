@@ -80,13 +80,15 @@
                         </div>
                         <form>
                             <input type="hidden" id="id" th:value="${note.id}">
-                            <input th:value="${note.title}" type="text" name="title" id="title" placeholder="title.." class="e35_660">
+                            <input th:value="${note.title}" type="text" name="title" id="title" placeholder="title.."
+                                   class="e35_660">
                         </form>
                         <div class=e35_661>
                             <div class=e35_662>
                                 <select id="selectSub">
                                     <div th:each="sub:${subjects}">
-                                        <option th:if="${sub.id == note.subject.id}" selected="selected" th:value="${sub.id}"
+                                        <option th:if="${sub.id == note.subject.id}" selected="selected"
+                                                th:value="${sub.id}"
                                                 th:text="${sub.name}" class="ei35_662_35_635"></option>
                                         <option th:unless="${sub.id == note.subject.id}" th:value="${sub.id}"
                                                 th:text="${sub.name}" class="ei35_662_35_635"></option>
@@ -104,8 +106,7 @@
                         </form>
 
                     </div>
-                    <div id="editor" class=e35_665>
-                        <div th:text="${note.content}" class="ei35_665_35_639">Enter your notes</div>
+                    <div id="editor" th:utext="${note.content}"class=e35_665>
                     </div>
                     <button class="e35_670" onclick='seehtml(editor)'>저장하기</button>
 
@@ -114,13 +115,17 @@
                 <script src="/js/updateNote.js"></script>
                 <script>
                     const Editor = toastui.Editor;
+                    var data = document.getElementById('editor').textContent;
+                    console.log(data);
                     const editor = new Editor({
                         el: document.querySelector('#editor'),
                         minHeight: '500px',
                         height: 'auto',
                         initialEditType: 'markdown',
-                        previewStyle: 'vertical'
+                        previewStyle: 'vertical',
                     });
+                    editor.setMarkdown(data);
+
                 </script>
             </div>
         </div>

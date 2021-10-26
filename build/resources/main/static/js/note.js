@@ -5,12 +5,10 @@ seehtml = function (editor) {
     const user = document.getElementById('user_id').innerHTML;
     let data = {
         title: title,
-        content: editor.getHTML(),
+        content: editor.getMarkdown(),
         subject_id: Number(sub),
         user_id: user
     }
-
-    console.log(data);
 
     $.ajax({
         type: "POST",
